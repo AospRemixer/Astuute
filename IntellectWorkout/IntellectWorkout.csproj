@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="brain_working_out.png" />
+    <None Remove="shushing-face.png" />
+    <None Remove="space_crack_art.png" />
+    <None Remove="temp_background.jpg" />
+    <None Remove="Windows_Settings_app_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="brain_working_out.png" />
+    <Resource Include="shushing-face.png" />
+    <Resource Include="space_crack_art.png" />
+    <Resource Include="temp_background.jpg" />
+    <Resource Include="Windows_Settings_app_icon.png" />
+  </ItemGroup>
+
+</Project>

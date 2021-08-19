@@ -1,0 +1,127 @@
+﻿<Window x:Class="IntellectWorkout.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IntellectWorkout"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Background="#FF251020"
+        Title="Intellect Workout" Height="720" Width="1280">
+    <Grid>
+        <Image Margin="149,86,113,34" Stretch="Fill" Source="/brain_working_out.png"/>
+        <Image Margin="-104,-34,-140,-288" Stretch="Fill" Source="/space_crack_art.png"/>
+        <Button Margin="49,47,850,315" BorderThickness="0" Background="#933861" Cursor="Hand" Click="Math_Button_Click" Name="MathButton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="50"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="100" Color="#FFBF477D"/>
+            </Button.Effect>
+            <TextBlock HorizontalAlignment="Center" Text="Math" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Kontanter Bold" Height="78" Width="244" FontSize="78"/>
+        </Button>
+
+        <Button Margin="198,450,850,34" BorderThickness="0" Background="#4f3565
+
+" Cursor="Hand">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="50"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="100" Color="#FF8856B3"/>
+            </Button.Effect>
+            <TextBlock HorizontalAlignment="Left" Text="Spatial " Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Kontanter Bold" Height="48" Width="143" FontSize="30"/>
+        </Button>
+        <Button Margin="524,450,524,34" BorderThickness="0" Background="#4f3565
+
+" Cursor="Hand">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="50"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="100" Color="#FF8856B3"/>
+            </Button.Effect>
+            <TextBlock HorizontalAlignment="Center" Text="Linguistic" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Kontanter Bold" Height="32" Width="195" FontSize="30"/>
+        </Button>
+        <Button Margin="865,450,183,34" BorderThickness="0" Background="#4f3565
+
+" Cursor="Hand">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="50"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="100" Color="#FF8856B3"/>
+            </Button.Effect>
+            <TextBlock HorizontalAlignment="Center" Background="Transparent" Text="Kinesthetic" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Kontanter Bold" Height="32" Width="205" FontSize="28"/>
+        </Button>
+        <Button Margin="483,155,583,352" BorderThickness="0" Background="#a06b99
+" Cursor="Hand">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="50"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="100" Color="#FFC078B7"/>
+            </Button.Effect>
+            <TextBlock HorizontalAlignment="Center" Background="Transparent" Text="Memory" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Kontanter Bold" Height="28" Width="121" FontSize="25"/>
+        </Button>
+        <Button Margin="764,155,302,352" BorderThickness="0" Background="#a06b99
+" Cursor="Hand">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="50"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="100" Color="#FFC078B7"/>
+            </Button.Effect>
+            <TextBlock HorizontalAlignment="Center" Background="Transparent" Text="Reasoning" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Kontanter Bold" Height="28" Width="168" FontSize="25"/>
+        </Button>
+        <Button Margin="1033,118,144,486" BorderThickness="0" Background="#4e3551
+
+" Cursor="Hand">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Image Height="47" Width="47" Source="/Windows_Settings_app_icon.png" Stretch="Fill"/>
+        </Button>
+        <Button Margin="1033,252,144,352" BorderThickness="0" Background="#4e3551
+
+" Cursor="Hand">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Image Height="56" Width="57" Source="/shushing-face.png" Stretch="Fill"/>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="1052,29,0,0" Text="Home" Foreground="#906e9e" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Kontanter Bold" Height="54" Width="228" FontSize="48">
+            <TextBlock.Effect>
+                <DropShadowEffect BlurRadius="175" Color="#FFA77ABA"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <Label x:Name="LiveTimeLabel" HorizontalAlignment="Left" Margin="565,0,0,0" VerticalAlignment="Top" Height="55" Width="186" FontSize="36" FontWeight="Bold" Foreground="White" FontFamily="Microsoft YaHei" />
+
+
+
+    </Grid>
+
+
+</Window>
