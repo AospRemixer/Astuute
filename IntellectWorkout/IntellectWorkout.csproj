@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Remove="brain_working_out.png" />
+    <None Remove="exit_icon.png" />
     <None Remove="shushing-face.png" />
     <None Remove="space_crack_art.png" />
     <None Remove="temp_background.jpg" />
@@ -16,6 +17,7 @@
 
   <ItemGroup>
     <Resource Include="brain_working_out.png" />
+    <Resource Include="exit_icon.png" />
     <Resource Include="shushing-face.png" />
     <Resource Include="space_crack_art.png" />
     <Resource Include="temp_background.jpg" />
