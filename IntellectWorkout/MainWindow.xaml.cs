@@ -42,8 +42,10 @@ namespace IntellectWorkout
         // MATH BUTTON
         private void Math_Button_Click(object sender, RoutedEventArgs e)
         {
-            
-
+            // OPEN THE MATH WINDOW
+            mathWindow maWindow = new mathWindow();
+            maWindow.Show();
+            this.Close();
         }
 
         // MEMORY BUTTON
@@ -98,7 +100,7 @@ namespace IntellectWorkout
         // TO MAKE MY OWN EXIT BUTTON
         private void Exit_Button_Home(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
+            Application.Current.Shutdown();
         }
     }
 }

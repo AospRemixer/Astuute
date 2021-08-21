@@ -18,9 +18,9 @@
     <Grid>
         <Image Margin="149,86,113,34" Stretch="Fill" Source="/brain_working_out.png"/>
         <Image Margin="-104,10,-140,-332" Stretch="Fill" Source="/space_crack_art.png"/>
-        <Button Margin="49,47,850,315" BorderThickness="0" Background="#933861" Cursor="Hand" Click="Math_Button_Click" Name="MathButton">
+        <Button Margin="49,47,850,315" BorderThickness="0" Background="#933861" Cursor="Hand" Click="Math_Button_Click" x:Name="MathButton">
             <Button.Resources>
-                <Style TargetType="Border">
+                <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="50"/>
                 </Style>
             </Button.Resources>
@@ -31,9 +31,9 @@
         </Button>
 
 
-        <Button Margin="198,450,850,34" BorderThickness="0" Background="#4f3565" Cursor="Hand" Click="Spatial_Button_Click" Name="SpatialButton">
+        <Button Margin="198,450,850,34" BorderThickness="0" Background="#4f3565" Cursor="Hand" Click="Spatial_Button_Click" x:Name="SpatialButton">
             <Button.Resources>
-                <Style TargetType="Border">
+                <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="50"/>
                 </Style>
             </Button.Resources>
@@ -42,9 +42,9 @@
             </Button.Effect>
             <TextBlock HorizontalAlignment="Center" Text="SPATIAL" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="34" Width="122" FontSize="36"/>
         </Button>
-        <Button Margin="524,450,524,34" BorderThickness="0" Background="#4f3565" Cursor="Hand" Click="Linguistic_Button_Click" Name="LinguisticButton">
+        <Button Margin="524,450,524,34" BorderThickness="0" Background="#4f3565" Cursor="Hand" Click="Linguistic_Button_Click" x:Name="LinguisticButton">
             <Button.Resources>
-                <Style TargetType="Border">
+                <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="50"/>
                 </Style>
             </Button.Resources>
@@ -53,9 +53,9 @@
             </Button.Effect>
             <TextBlock HorizontalAlignment="Center" Text="LINGUISTIC" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="35" Width="179" FontSize="36"/>
         </Button>
-        <Button Margin="865,450,183,34" BorderThickness="0" Background="#4f3565" Cursor="Hand" Click="Kinesthetic_Button_Click" Name="KinestheticButton">
+        <Button Margin="865,450,183,34" BorderThickness="0" Background="#4f3565" Cursor="Hand" Click="Kinesthetic_Button_Click" x:Name="KinestheticButton">
             <Button.Resources>
-                <Style TargetType="Border">
+                <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="50"/>
                 </Style>
             </Button.Resources>
@@ -64,9 +64,9 @@
             </Button.Effect>
             <TextBlock HorizontalAlignment="Center" Background="Transparent" Text="KINESTHETIC" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="36" Width="208" FontSize="36"/>
         </Button>
-        <Button Margin="483,155,583,352" BorderThickness="0" Background="#a06b99" Cursor="Hand" Click="Memory_Button_Click" Name="MemoryButton">
+        <Button Margin="483,155,583,352" BorderThickness="0" Background="#a06b99" Cursor="Hand" Click="Memory_Button_Click" x:Name="MemoryButton">
             <Button.Resources>
-                <Style TargetType="Border">
+                <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="50"/>
                 </Style>
             </Button.Resources>
@@ -75,9 +75,9 @@
             </Button.Effect>
             <TextBlock HorizontalAlignment="Center" Background="Transparent" Text="MEMORY" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="40" Width="135" FontSize="36"/>
         </Button>
-        <Button Margin="764,155,302,352" BorderThickness="0" Background="#a06b99" Cursor="Hand" Click="Reasoning_Button_Click" Name="ReasoningButton">
+        <Button Margin="764,155,302,352" BorderThickness="0" Background="#a06b99" Cursor="Hand" Click="Reasoning_Button_Click" x:Name="ReasoningButton">
             <Button.Resources>
-                <Style TargetType="Border">
+                <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="50"/>
                 </Style>
             </Button.Resources>
@@ -86,9 +86,9 @@
             </Button.Effect>
             <TextBlock HorizontalAlignment="Center" Background="Transparent" Text="REASONING" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="35" Width="127" FontSize="36"/>
         </Button>
-        <Button Margin="1033,118,131,486" BorderThickness="0" Background="#4e3551" Cursor="Hand" Click="Settings_Button_Click" Name="SettingsButton">
+        <Button Margin="1033,118,131,486" BorderThickness="0" Background="#4e3551" Cursor="Hand" Click="Settings_Button_Click" x:Name="SettingsButton">
             <Button.Resources>
-                <Style TargetType="Border">
+                <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="30"/>
                 </Style>
             </Button.Resources>
@@ -97,9 +97,9 @@
             </Button.Effect>
             <Image Height="47" Width="47" Source="/Windows_Settings_app_icon.png" Stretch="Fill"/>
         </Button>
-        <Button Margin="1033,252,131,352" BorderThickness="0" Background="#4e3551" Cursor="Hand" Click="Secret_Button_Click" Name="SecretButton">
+        <Button Margin="1033,252,131,352" BorderThickness="0" Background="#4e3551" Cursor="Hand" Click="Secret_Button_Click" x:Name="SecretButton">
             <Button.Resources>
-                <Style TargetType="Border">
+                <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="30"/>
                 </Style>
             </Button.Resources>
@@ -114,7 +114,7 @@
             </TextBlock.Effect>
         </TextBlock>
         <Label x:Name="LiveTimeLabel" HorizontalAlignment="Left" Margin="565,0,0,0" VerticalAlignment="Top" Height="55" Width="186" FontSize="36" FontWeight="Bold" Foreground="White" FontFamily="Microsoft YaHei" />
-        <Button Margin="1239,0,0,679" Background="Transparent" Name="ExitButtonHome" BorderThickness="0" Click="Exit_Button_Home">
+        <Button Margin="1244,0,0,684" Background="Transparent" x:Name="ExitButtonHome" BorderThickness="0" Click="Exit_Button_Home">
             <Image Source="/exit_icon.png" Height="42" Width="36" />
         </Button>
 
