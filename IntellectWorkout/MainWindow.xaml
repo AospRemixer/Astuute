@@ -84,7 +84,7 @@
             <Button.Effect>
                 <DropShadowEffect BlurRadius="100" Color="#FFC078B7"/>
             </Button.Effect>
-            <TextBlock HorizontalAlignment="Center" Background="Transparent" Text="REASONING" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="35" Width="127" FontSize="36"/>
+            <TextBlock HorizontalAlignment="Center" Background="Transparent" Text="REASONING" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="35" Width="185" FontSize="36"/>
         </Button>
         <Button Margin="1033,118,131,486" BorderThickness="0" Background="#4e3551" Cursor="Hand" Click="Settings_Button_Click" x:Name="SettingsButton">
             <Button.Resources>

@@ -46,7 +46,9 @@ namespace IntellectWorkout
         // START BUTTON
         private void Start_Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Work In Progress!");
+            mathQuestions mq = new mathQuestions();
+            mq.Show();
+            Close();
         }
 
 
@@ -56,6 +58,13 @@ namespace IntellectWorkout
             MainWindow mw = new MainWindow();
             mw.Show();
             Close();
+        }
+
+        // TO HELP DRAG MOVE THE APP
+        private void mathWindow_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
         }
     }
 }

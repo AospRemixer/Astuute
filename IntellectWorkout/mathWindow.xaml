@@ -10,6 +10,7 @@
         Background="#FF251020" 
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
+        MouseDown="mathWindow_MouseDown"
         Title="mathWindow" Height="720" Width="1280">
     <Grid>
         <Button Margin="1244,0,0,684" Background="Transparent" x:Name="ExitButtonMath" BorderThickness="0" Click="Exit_Button_Math">
@@ -34,7 +35,7 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <RichTextBox Background="Transparent" Foreground="#dfa7e4" FontSize="28" Margin="290,185,254,291" BorderThickness="0" FontFamily="Bahnschrift">
+        <RichTextBox Background="Transparent" Foreground="#dfa7e4" FontSize="28" Margin="290,185,254,291" BorderThickness="0" FontFamily="Bahnschrift" IsReadOnly="True">
             <FlowDocument>
                 <Paragraph>
                     <Run Text="You will be given 10 logical questions. Your goal is to figure out the correct awnser for each of them. More correct awnser may mean higher level of Mathematical intelligence. The logical-mathematical learning style is one of eight types of learning styles, or intelligences, defined in developmental psychologist Howard Gardner's theory of Multiple Intelligences. "/>
