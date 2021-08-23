@@ -13,8 +13,22 @@
         MouseDown="mathWindowQuestions_MouseDown"
         Title="mathQuestions" Height="720" Width="1280">
     <Grid>
+        <Label x:Name="LiveTimeLabel" HorizontalAlignment="Left" Margin="565,0,0,0" VerticalAlignment="Top" Height="55" Width="186" FontSize="36" FontWeight="Bold" Foreground="White" FontFamily="Microsoft YaHei" />
+        <TextBlock x:Name="Question1math" HorizontalAlignment="Center" Margin="0,119,0,0" VerticalAlignment="Top" Height="278" Width="980" FontSize="36" FontWeight="Bold" Foreground="White" FontFamily="Trebuchet MS" TextWrapping="WrapWithOverflow"/>
         <Button Margin="1244,0,0,684" Background="Transparent" x:Name="mathQuestionsExit" BorderThickness="0" Click="exitMathQuestions_Click">
             <Image Source="/exit_icon.png" Height="42" Width="36" />
+        </Button>
+        <TextBox Name="AwnserTextBox" TextAlignment="Center" Background="Transparent" Foreground="#FFBF477D" FontSize="72" HorizontalAlignment="Center" Margin="0,424,0,0" Text="Awnser Here" BorderThickness="0" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Width="898" Height="89" FontFamily="Trebuchet MS" />
+        <Button Margin="292,546,292,88" BorderThickness="0" Background="#933861" Cursor="Hand" Click="SubmitButton_click" x:Name="submitButton">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="50"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="100" Color="#FFBF477D"/>
+            </Button.Effect>
+            <TextBlock HorizontalAlignment="Center" Text="Submit" TextAlignment="Center" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Trebuchet MS" Height="78" Width="675" FontSize="78"/>
         </Button>
         <Button Margin="10,10,1198,642" BorderThickness="0" Background="#933861" Cursor="Hand" Click="backMathQuestions_Click" x:Name="backMathQuestions">
             <Button.Resources>
