@@ -41,5 +41,6 @@
             </Button.Effect>
             <Image Height="69" Width="72" Source="/back_arrow.png" Stretch="Fill"/>
         </Button>
+        <Label Content="0/10" HorizontalAlignment="Left" Margin="1009,17,0,0" VerticalAlignment="Top" Foreground="#FFBF477D" FontSize="52" Height="80" Width="121" FontFamily="Trebuchet MS"/>
     </Grid>
 </Window>

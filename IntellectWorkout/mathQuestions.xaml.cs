@@ -20,7 +20,19 @@ namespace IntellectWorkout
     /// </summary>
     public partial class mathQuestions : Window
     {
-        int random { get; set; }
+        // MAKE "RANDOM" VARIABLES
+        
+        Random r = new Random();
+        public static Int32 MAIN_NUM;
+        public static Int32 MAIN_NUM2;
+        public static Int32 MAIN_NUM3;
+        public static Int32 MAIN_NUM4;
+        public static Int32 MAIN_NUM5;
+        public static Int32 MAIN_NUM6;
+        public static Int32 MAIN_NUM7;
+        public static Int32 MAIN_NUM8;
+        public static Int32 MAIN_NUM9;
+        public static Int32 MAIN_NUM10;
 
         public mathQuestions()
         {
@@ -30,12 +42,17 @@ namespace IntellectWorkout
             LiveTime.Interval = TimeSpan.FromSeconds(1);
             LiveTime.Tick += timer_Tick;
             LiveTime.Start();
-            // GENERATES A RANDOM NUMBER BETWEEN 1-20 FOR A RANDOM STRING IN A ARRAY!
-            Random r = new Random();
-            int random = r.Next(0, 4);
-            string[] questions = { "What is the one thing that all wise men, regardless of their religion or politics, agree is between heaven and earth? What is it?", "What letter comes next: O T T F F S S ?", "What common English verb becomes its own past tence by rearranging its letters?", "It occurs once in a minute, twice in a moment, but never in an hour." };
-            string finalQuesiton = questions[random];
-            Question1math.Text = finalQuesiton;
+            MAIN_NUM = r.Next(0, 4);
+            MAIN_NUM2 = r.Next(0, 4);
+            MAIN_NUM3 = r.Next(0, 4);
+            MAIN_NUM4 = r.Next(0, 4);
+            MAIN_NUM5 = r.Next(0, 4);
+            MAIN_NUM6 = r.Next(0, 4);
+            MAIN_NUM7 = r.Next(0, 4);
+            MAIN_NUM8 = r.Next(0, 4);
+            MAIN_NUM9 = r.Next(0, 4);
+            MAIN_NUM10 = r.Next(0, 4);
+            createQ(MAIN_NUM);
 
             // FUNCTION FOR THE TIMER
             void timer_Tick(object sender, EventArgs e)
@@ -67,6 +84,19 @@ namespace IntellectWorkout
             Application.Current.Shutdown();
         }
 
+        public void createQ(int finalNum)
+        {
+            string[] questions = { "What is the one thing that all wise men, regardless of their religion or politics, agree is between heaven and earth? What is it?", "What letter comes next: O T T F F S S ?", "What common English verb becomes its own past tence by rearranging its letters?", "It occurs once in a minute, twice in a moment, but never in an hour." };
+            string finalQuesiton = questions[finalNum];
+            Question1math.Text = finalQuesiton;
+            MessageBox.Show(finalNum.ToString());
+            if (submitButton.IsPressed)
+            {
+                MessageBox.Show("working!");
+            }
+        }
+
+
         private void first_Button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -89,35 +119,114 @@ namespace IntellectWorkout
 
         public void SubmitButton_click(object sender, RoutedEventArgs e)
         {
-            if (random == 3) 
+            switch (MAIN_NUM)
             {
-                if (AwnserTextBox.Text == "M")
-                {
-                    MessageBox.Show("correct!");
-                }
-            }
-            else if (random == 2)
-            {
-                if (AwnserTextBox.Text == "Eat")
-                {
-                    MessageBox.Show("correct!");
-                }
+                case 0:
+                    if (AwnserTextBox.Text == "And")
+                    {
+                        MessageBox.Show("correct!");
+                        createQ(MAIN_NUM2);
+                    }
+                    else if (AwnserTextBox.Text == "and")
+                    {
+                        MessageBox.Show("correct!");
+                        createQ(MAIN_NUM2);
+                    }
+                    else
+                    {
+                        AwnserTextBox.Text = "Incorrect!";
+                    }
+                    break;
+                case 1:
+                    if (AwnserTextBox.Text == "E")
+                    {
+                        MessageBox.Show("correct!");
+                        createQ(MAIN_NUM2);
+                    }
+                    else
+                    {
+                        AwnserTextBox.Text = "Incorrect!";
+                    }
+                    break;
+                case 2:
+                    if (AwnserTextBox.Text == "Eat")
+                    {
+                        MessageBox.Show("correct!");
+                        createQ(MAIN_NUM2);
+                    }
+                    else
+                    {
+                        AwnserTextBox.Text = "Incorrect!";
+                    }
+                    break;
+                case 3:
+                    if (AwnserTextBox.Text == "M")
+                    {
+                        MessageBox.Show("correct!");
+                        createQ(MAIN_NUM2);
+                    }
+                    else
+                    {
+                        AwnserTextBox.Text = "Incorrect!";
+                    }
+                    break;
+                default:
+                    AwnserTextBox.Text = "Incorrect!";
+                    break;
+
             }
 
-            else if (random == 1)
+            switch (MAIN_NUM2)
             {
-                if (AwnserTextBox.Text == "E")
-                {
-                    MessageBox.Show("correct!");
-                }
-            }
-
-            else if (random == 0)
-            {
-                if (AwnserTextBox.Text == "And")
-                {
-                    MessageBox.Show("correct!");
-                }
+                case 0:
+                    if (AwnserTextBox.Text == "And")
+                    {
+                        MessageBox.Show("correct!");
+                        createQ(MAIN_NUM2);
+                    }
+                    else if (AwnserTextBox.Text == "and")
+                    {
+                        MessageBox.Show("correct!");
+                        createQ(MAIN_NUM2);
+                    }
+                    else
+                    {
+                        AwnserTextBox.Text = "Incorrect!";
+                    }
+                    break;
+                case 1:
+                    if (AwnserTextBox.Text == "E")
+                    {
+                        MessageBox.Show("correct!");
+                        createQ(MAIN_NUM2);
+                    }
+                    else
+                    {
+                        AwnserTextBox.Text = "Incorrect!";
+                    }
+                    break;
+                case 2:
+                    if (AwnserTextBox.Text == "Eat")
+                    {
+                        MessageBox.Show("correct!");
+                        createQ(MAIN_NUM2);
+                    }
+                    else
+                    {
+                        AwnserTextBox.Text = "Incorrect!";
+                    }
+                    break;
+                case 3:
+                    if (AwnserTextBox.Text == "M")
+                    {
+                        MessageBox.Show("correct!");
+                        createQ(MAIN_NUM2);
+                    }
+                    else
+                    {
+                        AwnserTextBox.Text = "Incorrect!";
+                    }
+                    break;
             }
         }
 
