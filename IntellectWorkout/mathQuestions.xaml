@@ -18,7 +18,7 @@
         <Button Margin="1244,0,0,684" Background="Transparent" x:Name="mathQuestionsExit" BorderThickness="0" Click="exitMathQuestions_Click">
             <Image Source="/exit_icon.png" Height="42" Width="36" />
         </Button>
-        <TextBox Name="AwnserTextBox" TextAlignment="Center" Background="Transparent" Foreground="#FFBF477D" FontSize="72" HorizontalAlignment="Center" Margin="0,424,0,0" Text="Awnser Here" BorderThickness="0" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Width="898" Height="89" FontFamily="Trebuchet MS" />
+        <TextBox Name="AwnserTextBox" TextAlignment="Center" Background="Transparent" Foreground="#FFBF477D" FontSize="72" HorizontalAlignment="Center" Margin="0,424,0,0" Text="Awnser Here" BorderThickness="0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="898" Height="89" FontFamily="Trebuchet MS" />
         <Button Margin="292,546,292,88" BorderThickness="0" Background="#933861" Cursor="Hand" Click="SubmitButton_click" x:Name="submitButton">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
