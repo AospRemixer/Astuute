@@ -1,4 +1,4 @@
-﻿using System
+﻿using System;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
@@ -36,7 +36,7 @@ namespace IntellectWorkout
         // START BUTTON
         private void Start_Button_Click(object sender, RoutedEventArgs e)
         {
-            mathQuestions mq = new mathQuestions();
+            mathQuestions mq = new();
             mq.Show();
             Close();
         }
