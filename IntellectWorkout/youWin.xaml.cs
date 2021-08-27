@@ -29,6 +29,8 @@ namespace IntellectWorkout
             MainWindow mw = new();
             mw.Show();
             Hide();
+            memoryQuestions mq = new();
+            mq.ResetAll();
         }
     }
 }

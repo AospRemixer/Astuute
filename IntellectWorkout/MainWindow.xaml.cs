@@ -39,7 +39,9 @@ namespace IntellectWorkout
         // MEMORY BUTTON
         private void Memory_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            memoryWindow mw = new();
+            mw.Show();
+            Hide();
         }
 
         // REASONING BUTTON
