@@ -19,11 +19,13 @@ namespace IntellectWorkout
         public static int points = 0;
         // PREVIOUS NUMBER
         public static int prevNum;
+        // USEFUL INT 
+        public static int i = 0;
 
         public memoryQuestions()
         {
             InitializeComponent();
-            int firstRand = r.Next(0, 51);
+            int firstRand = r.Next(0, 11);
             string main = firstRand.ToString();
             memoryFunc(main);
 
@@ -50,31 +52,31 @@ namespace IntellectWorkout
                 DragMove();
         }
 
-        // My Main Function 
+        // My Main Function IF NEXT BUTTON IS CLICKED
         public void memoryFunc(string newNum)
         {
             mainText.Text = newNum;
             int a = Convert.ToInt32(newNum);
-            allNums.Add(a);
+            if (allNums.Contains(a))
+            {
+                i++;
+            } else
+            {
+                allNums.Add(a);
+            }
         }
 
+
+        // IF REPEATED BUTTON IS CLICKED
         public void numChecker(int numToCheck)
         {
-            if (allNums.Contains(numToCheck))
+            if (!allNums.Contains(numToCheck))
             {
-                points++;
-                string pointsString = points.ToString();
-                numOfRepeated.Content = pointsString;
-                int nextRand = r.Next(0, 51);
-                string newRand = nextRand.ToString();
-                memoryFunc(newRand);
-
+                MessageBox.Show("False");
             }
             else
             {
-                youLost yl = new();
-                yl.Show();
-                Hide();
+                MessageBox.Show("True");
             }
         }
 
@@ -85,30 +87,31 @@ namespace IntellectWorkout
               numChecker(a);
 
         }
-
-
-        // THE BUG IS THAT IT CLOSES BEFORE THE REPEATED NUMBER IS EVEN SHOWN! 
-        // AND CLICKING REPEAT GIVES FREE POINTS!
+        // ++++++++++++++++++++++++++++++++++++++++
+        // AND CLICKING REPEATED GIVES FREE POINTS!
+        // ++++++++++++++++++++++++++++++++++++++++
         private void NextButton_click(object sender, RoutedEventArgs e)
         {
-            int nextRand = r.Next(0, 51);
-            if (allNums.Contains(nextRand))
+            if (i == 0)
+            {
+                int nextRand = r.Next(0, 11);
+                string newRand = nextRand.ToString();
+                memoryFunc(newRand);
+            }
+            else if (i == 1)
             {
                 youLost yl = new();
                 yl.Show();
                 Hide();
             }
-            else
-            {
-                string newRand = nextRand.ToString();
-                memoryFunc(newRand);
-            }
+
         }
 
         public void ResetAll()
         {
             points = 0;
             allNums.Clear();
+            i = 0;
         }
     }
 }
