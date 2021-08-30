@@ -14,7 +14,7 @@ namespace IntellectWorkout
         // NEW RANDOM
         public static Random r = new();
         // OLD USED NUMS STORE HERE
-        public static List<int> allNums = new(); 
+        public static List<int> allNums = new();
         // THESE ARE THE POINTS
         public static int points = 0;
         // PREVIOUS NUMBER
@@ -31,27 +31,6 @@ namespace IntellectWorkout
 
         }
 
-        private void Exit_Button_MemoryQ(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
-        private void Back_Button_Click(object sender, RoutedEventArgs e)
-        {
-            allNums.Clear();
-            points = 0;
-            memoryWindow mw = new();
-            mw.Show();
-            Hide();
-        }
-
-        // TO HELP DRAG MOVE THE APP
-        private void memoryWindowQuestions_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-                DragMove();
-        }
-
         // My Main Function IF NEXT BUTTON IS CLICKED
         public void memoryFunc(string newNum)
         {
@@ -60,7 +39,8 @@ namespace IntellectWorkout
             if (allNums.Contains(a))
             {
                 i++;
-            } else
+            }
+            else
             {
                 allNums.Add(a);
             }
@@ -82,9 +62,9 @@ namespace IntellectWorkout
 
         private void RepeatedButton_click(object sender, RoutedEventArgs e)
         {
-              string mainToText = mainText.Text.ToString();
-              int a = Convert.ToInt32(mainToText);
-              numChecker(a);
+            string mainToText = mainText.Text.ToString();
+            int a = Convert.ToInt32(mainToText);
+            numChecker(a);
 
         }
         // ++++++++++++++++++++++++++++++++++++++++
@@ -112,6 +92,27 @@ namespace IntellectWorkout
             points = 0;
             allNums.Clear();
             i = 0;
+        }
+
+        private void Exit_Button_MemoryQ(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Back_Button_Click(object sender, RoutedEventArgs e)
+        {
+            allNums.Clear();
+            points = 0;
+            memoryWindow mw = new();
+            mw.Show();
+            Hide();
+        }
+
+        // TO HELP DRAG MOVE THE APP
+        private void memoryWindowQuestions_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
         }
     }
 }

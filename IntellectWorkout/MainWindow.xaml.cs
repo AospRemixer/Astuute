@@ -47,7 +47,9 @@ namespace IntellectWorkout
         // REASONING BUTTON
         private void Reasoning_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            reasoningWindow rw = new();
+            rw.Show();
+            Hide();
         }
 
         // SPATIAL BUTTON
