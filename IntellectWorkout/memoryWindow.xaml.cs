@@ -48,5 +48,6 @@ namespace IntellectWorkout
             if (e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
         }
+
     }
 }

@@ -35,10 +35,10 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <RichTextBox Background="Transparent" Foreground="#dfa7e4" FontSize="28" Margin="290,185,254,291" BorderThickness="0" FontFamily="Bahnschrift" IsReadOnly="True">
+        <RichTextBox Background="Transparent" Foreground="#dfa7e4" FontSize="28" Margin="290,185,254,248" BorderThickness="0" FontFamily="Bahnschrift" IsReadOnly="True">
             <FlowDocument>
                 <Paragraph>
-                    <Run Text="You will see random numbers between 1-100, you will have to click next, if you see a number that repeated TWICE. Then you can click repeated. The goal is to catch as many repeated numbers as you can. A study by University of Chicago researchers has proven that memory games do improve memory. Good Luck!"/>
+                    <Run Text="You will see random numbers between 1-100, you will have to click next, if you see a number that repeated TWICE. Then you can click repeated, once you do everything will clear up and you will have to spot a new pair of repeated numbers! The goal is to catch as many repeated numbers as you can. A study by University of Chicago researchers has proven that memory games do improve memory. Good Luck!"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
