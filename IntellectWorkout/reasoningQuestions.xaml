@@ -13,7 +13,7 @@
         MouseDown="reasoningQuestions_MouseDown"
         Title="reasoningQuestions" Height="720" Width="1280">
     <Grid>
-        <Image HorizontalAlignment="Left" Height="420" Margin="338,78,0,0" VerticalAlignment="Top" Width="640" Name="mainImage" Stretch="Fill" />
+        <Image HorizontalAlignment="Left" Height="420" Margin="225,78,0,0" VerticalAlignment="Top" Width="854" Name="mainImage" Stretch="Fill" />
         <Button Margin="1244,0,0,684" Background="Transparent" x:Name="ExitButtonMemory" BorderThickness="0" Click="Exit_Button_Memory">
             <Image Source="/exit_icon.png" Height="42" Width="36" />
         </Button>
@@ -30,7 +30,6 @@
             <Image Height="69" Width="72" Source="/back_arrow.png" Stretch="Fill"/>
         </Button>
         <Label x:Name="LiveTimeLabel" HorizontalAlignment="Left" Margin="565,0,0,0" VerticalAlignment="Top" Height="55" Width="186" FontSize="36" FontWeight="Bold" Foreground="White" FontFamily="Microsoft YaHei" />
-        <StackPanel Margin="338,78,302,222" Width="640" Height="420"/>
         <Button Margin="154,516,640,118" BorderThickness="0" Background="#933861" Cursor="Hand" Click="first_click" x:Name="firstButton">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
