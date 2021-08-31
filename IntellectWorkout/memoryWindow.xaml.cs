@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace IntellectWorkout
 {
@@ -22,6 +23,18 @@ namespace IntellectWorkout
         public memoryWindow()
         {
             InitializeComponent();
+            // THIS IS THE TIMER PART
+            DispatcherTimer LiveTime = new DispatcherTimer();
+            LiveTime.Interval = TimeSpan.FromSeconds(1);
+            LiveTime.Tick += timer_Tick;
+            LiveTime.Start();
+
+            // FUNCTION FOR THE TIMER
+            void timer_Tick(object sender, EventArgs e)
+            {
+                LiveTimeLabel.Content = DateTime.Now.ToString("HH:mm");
+            }
+
         }
 
         private void Start_Button_Click(object sender, RoutedEventArgs e)

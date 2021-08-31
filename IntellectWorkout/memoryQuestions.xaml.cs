@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Threading;
 
 namespace IntellectWorkout
 {
@@ -28,6 +29,18 @@ namespace IntellectWorkout
             int firstRand = r.Next(0, 26);
             string main = firstRand.ToString();
             memoryFunc(main);
+            // THIS IS THE TIMER PART
+            DispatcherTimer LiveTime = new DispatcherTimer();
+            LiveTime.Interval = TimeSpan.FromSeconds(1);
+            LiveTime.Tick += timer_Tick;
+            LiveTime.Start();
+
+            // FUNCTION FOR THE TIMER
+            void timer_Tick(object sender, EventArgs e)
+            {
+                LiveTimeLabel.Content = DateTime.Now.ToString("HH:mm");
+            }
+
 
         }
 
@@ -89,9 +102,7 @@ namespace IntellectWorkout
             numChecker(a);
 
         }
-        // ++++++++++++++++++++++++++++++++++++++++
-        // AND CLICKING REPEATED GIVES FREE POINTS!
-        // ++++++++++++++++++++++++++++++++++++++++
+
         private void NextButton_click(object sender, RoutedEventArgs e)
         {
             int nextRand = r.Next(0, 26);

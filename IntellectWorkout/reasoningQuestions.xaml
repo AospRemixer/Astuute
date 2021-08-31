@@ -5,8 +5,75 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IntellectWorkout"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Background="#FF251020" 
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="reasoningQuestions_MouseDown"
         Title="reasoningQuestions" Height="720" Width="1280">
     <Grid>
-        
+        <Image HorizontalAlignment="Left" Height="420" Margin="338,78,0,0" VerticalAlignment="Top" Width="640" Name="mainImage" Stretch="Fill" />
+        <Button Margin="1244,0,0,684" Background="Transparent" x:Name="ExitButtonMemory" BorderThickness="0" Click="Exit_Button_Memory">
+            <Image Source="/exit_icon.png" Height="42" Width="36" />
+        </Button>
+
+        <Button Margin="10,10,1198,642" BorderThickness="0" Background="#933861" Cursor="Hand" Click="Back_Button_ClickR" x:Name="BackButton">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect  Color="#933861" BlurRadius="120"/>
+            </Button.Effect>
+            <Image Height="69" Width="72" Source="/back_arrow.png" Stretch="Fill"/>
+        </Button>
+        <Label x:Name="LiveTimeLabel" HorizontalAlignment="Left" Margin="565,0,0,0" VerticalAlignment="Top" Height="55" Width="186" FontSize="36" FontWeight="Bold" Foreground="White" FontFamily="Microsoft YaHei" />
+        <StackPanel Margin="338,78,302,222" Width="640" Height="420"/>
+        <Button Margin="154,516,640,118" BorderThickness="0" Background="#933861" Cursor="Hand" Click="first_click" x:Name="firstButton">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="50"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="100" Color="#FFBF477D"/>
+            </Button.Effect>
+            <TextBlock HorizontalAlignment="Center" Name="firstButtonText" Text="First" TextAlignment="Center" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="78" Width="330" FontSize="78"/>
+        </Button>
+        <Button Margin="658,516,136,118" BorderThickness="0" Background="#933861" Cursor="Hand" Click="second_click" x:Name="secondButton">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="50"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="100" Color="#FFBF477D"/>
+            </Button.Effect>
+            <TextBlock HorizontalAlignment="Center" Name="secondButtonText" Text="Second" TextAlignment="Center" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="78" Width="330" FontSize="78"/>
+        </Button>
+        <Button Margin="154,609,640,25" BorderThickness="0" Background="#933861" Cursor="Hand" Click="third_click" x:Name="thirdButton">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="50"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="100" Color="#FFBF477D"/>
+            </Button.Effect>
+            <TextBlock HorizontalAlignment="Center" Name="thirdButtonText" Text="Third" TextAlignment="Center" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="78" Width="330" FontSize="78"/>
+        </Button>
+        <Button Margin="658,609,136,25" BorderThickness="0" Background="#933861" Cursor="Hand" Click="forth_click" x:Name="forthButton">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="50"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="100" Color="#FFBF477D"/>
+            </Button.Effect>
+            <TextBlock HorizontalAlignment="Center" Name="forthButtonText" Text="Forth" TextAlignment="Center" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="78" Width="330" FontSize="78"/>
+        </Button>
     </Grid>
 </Window>
