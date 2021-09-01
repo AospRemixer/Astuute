@@ -19,6 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="back_arrow.png" />
     <Resource Include="brain_working_out.png" />
     <Resource Include="exit_icon.png" />

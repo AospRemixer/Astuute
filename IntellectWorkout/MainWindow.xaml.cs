@@ -55,7 +55,9 @@ namespace IntellectWorkout
         // SPATIAL BUTTON
         private void Spatial_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            spatialWindow sw = new();
+            sw.Show();
+            Close();
         }
 
         // LINGUISTIC BUTTON
