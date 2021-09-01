@@ -74,5 +74,6 @@
             </Button.Effect>
             <TextBlock HorizontalAlignment="Center" Name="forthButtonText" Text="Forth" TextAlignment="Center" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="78" Width="330" FontSize="78"/>
         </Button>
+        <Label Name="numOfcorrect" Content="0" HorizontalAlignment="Left" Margin="1036,18,0,0" VerticalAlignment="Top" Foreground="#FFBF477D" FontSize="52" Height="80" Width="121" FontFamily="Trebuchet MS"/>
     </Grid>
 </Window>

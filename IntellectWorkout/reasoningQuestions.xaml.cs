@@ -26,11 +26,13 @@ namespace IntellectWorkout
         public static string[] uris = { @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\1.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\2.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\3.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\4.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\5.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\6.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\7.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\8.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\9.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\10.png" };
         // CURRENT STATE.. [MAIN VARIABLE]
         public static int i = r.Next(0, 10);
+        // NUM OF CORRECT
+        public static int numOfC = -1;
 
         public reasoningQuestions()
         {
             InitializeComponent();
-            mainImage.Source = new BitmapImage(new Uri(uris[i]));
+            setupQ();
             // THIS IS THE TIMER PART
             DispatcherTimer LiveTime = new DispatcherTimer();
             LiveTime.Interval = TimeSpan.FromSeconds(1);
@@ -43,6 +45,86 @@ namespace IntellectWorkout
             }
         }
         
+        public void setupQ()
+        {
+            numOfC++;
+            numOfcorrect.Content = numOfC.ToString();
+            if (i == 9)
+            {
+                i = 0;
+                mainImage.Source = new BitmapImage(new Uri(uris[i]));
+            }
+            else
+            { 
+                i++;
+                mainImage.Source = new BitmapImage(new Uri(uris[i]));
+            }
+            // THIS SETUPS THE TEXT ON THE BUTTON ACCORDING TO THE QUESTION, WHICH IS BASICALLY THE VARIABLE "i".
+            switch(i)
+            {
+                case 0:
+                    firstButtonText.Text = 6.ToString();
+                    secondButtonText.Text = 7.ToString();
+                    thirdButtonText.Text = 5.ToString();
+                    forthButtonText.Text = 4.ToString();
+                    break;
+                case 1:
+                    firstButtonText.Text = 72000.ToString();
+                    secondButtonText.Text = 27000.ToString();
+                    thirdButtonText.Text = 72900.ToString();
+                    forthButtonText.Text = 27900.ToString();
+                    break;
+                case 2:
+                    firstButtonText.Text = 1.ToString();
+                    secondButtonText.Text = 2.ToString();
+                    thirdButtonText.Text = 10.ToString();
+                    forthButtonText.Text = 6.ToString();
+                    break;
+                case 3:
+                    firstButtonText.Text = 27.ToString();
+                    secondButtonText.Text = 98.ToString();
+                    thirdButtonText.Text = 72.ToString();
+                    forthButtonText.Text = 89.ToString();
+                    break;
+                case 4:
+                    firstButtonText.Text = 24.ToString();
+                    secondButtonText.Text = 39.ToString();
+                    thirdButtonText.Text = 54.ToString();
+                    forthButtonText.Text = 108.ToString();
+                    break;
+                case 5:
+                    firstButtonText.Text = 7.ToString();
+                    secondButtonText.Text = 16.ToString();
+                    thirdButtonText.Text = 12.ToString();
+                    forthButtonText.Text = 14.ToString();
+                    break;
+                case 6:
+                    firstButtonText.Text = 60.ToString();
+                    secondButtonText.Text = 50.ToString();
+                    thirdButtonText.Text = 48.ToString();
+                    forthButtonText.Text = 58.ToString();
+                    break;
+                case 7:
+                    firstButtonText.Text = 25.ToString();
+                    secondButtonText.Text = 49.ToString();
+                    thirdButtonText.Text = 8.ToString();
+                    forthButtonText.Text = 2.ToString();
+                    break;
+                case 8:
+                    firstButtonText.Text = 30.ToString();
+                    secondButtonText.Text = 36.ToString();
+                    thirdButtonText.Text = 38.ToString();
+                    forthButtonText.Text = 48.ToString();
+                    break;
+                case 9:
+                    firstButtonText.Text = 41.ToString();
+                    secondButtonText.Text = 43.ToString();
+                    thirdButtonText.Text = 49.ToString();
+                    forthButtonText.Text = 50.ToString();
+                    break;
+            }
+        }
+
         private void Exit_Button_Memory(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
@@ -65,37 +147,83 @@ namespace IntellectWorkout
 
         private void first_click(object sender, RoutedEventArgs e)
         {
-            if (i == 9)
+            switch(i)
             {
-                i = 0;
-                mainImage.Source = new BitmapImage(new Uri(uris[i]));
-            }
-            else
-            {
-                i++;
-                mainImage.Source = new BitmapImage(new Uri(uris[i]));
-            }
+                case 0:
+                    setupQ();
+                    break;
 
+                case 4:
+                    setupQ();
+                    break;
+                case 5:
+                    setupQ();
+                    break;
+                default:
+                    youLost yl = new();
+                    yl.Show();
+                    Close();
+                    break;
+            }
         }
 
         private void second_click(object sender, RoutedEventArgs e)
         {
-
+            switch(i)
+            {
+                case 1:
+                    setupQ();
+                    break;
+                case 3:
+                    setupQ();
+                    break;
+                case 9:
+                    setupQ();
+                    break;
+                default:
+                    youLost yl = new();
+                    yl.Show();
+                    Close();
+                    break;
+            }
         }
 
         private void third_click(object sender, RoutedEventArgs e)
         {
-
+            switch(i)
+            {
+                case 2:
+                    setupQ();
+                    break;
+                case 6:
+                    setupQ();
+                    break;
+                case 7:
+                    setupQ();
+                    break;
+                case 8:
+                    setupQ();
+                    break;
+                default:
+                    youLost yl = new();
+                    yl.Show();
+                    Close();
+                    break;
+            }
         }
 
         private void forth_click(object sender, RoutedEventArgs e)
         {
-
+            // So basically 4th button is never correct :(((
+            youLost yl = new();
+            yl.Show();
+            Close();
         }
 
         public void resetAll()
         {
             i = r.Next(0, 10);
+            numOfC = -1;
         }
     }
 }

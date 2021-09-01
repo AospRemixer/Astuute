@@ -34,6 +34,8 @@ namespace IntellectWorkout
             mq.removeQ();
             memoryQuestions memoryq = new();
             memoryq.ResetAll();
+            reasoningQuestions rq = new();
+            rq.resetAll();
         }
     }
 }
