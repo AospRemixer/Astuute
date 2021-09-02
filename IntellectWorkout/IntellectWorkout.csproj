@@ -12,9 +12,11 @@
     <None Remove="back_arrow.png" />
     <None Remove="brain_working_out.png" />
     <None Remove="clear.png" />
+    <None Remove="eraser.png" />
     <None Remove="exit_icon.png" />
     <None Remove="highlighter.png" />
     <None Remove="paint.png" />
+    <None Remove="select.png" />
     <None Remove="shushing-face.png" />
     <None Remove="space_crack_art.png" />
     <None Remove="temp_background.jpg" />
@@ -29,9 +31,11 @@
     <Resource Include="back_arrow.png" />
     <Resource Include="brain_working_out.png" />
     <Resource Include="clear.png" />
+    <Resource Include="eraser.png" />
     <Resource Include="exit_icon.png" />
     <Resource Include="highlighter.png" />
     <Resource Include="paint.png" />
+    <Resource Include="select.png" />
     <Resource Include="shushing-face.png" />
     <Resource Include="space_crack_art.png" />
     <Resource Include="temp_background.jpg" />

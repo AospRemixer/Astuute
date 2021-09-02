@@ -16,7 +16,7 @@
 
     <Viewbox StretchDirection="Both" Stretch="Uniform">
         <Grid Height="720" Width="1280" >
-            <TextBox Name="sizeTxt" TextChanged="sizeTxt_change" PreviewTextInput="NumberValidationTextBox" FontSize="100" Text="35" MaxLength="2" TextWrapping="NoWrap" Margin="-3,485,1149,100" TextAlignment="Center" Background="Transparent" Foreground="#dfa7e4" BorderThickness="0" FontFamily="Comic Sans MS"/>
+            <TextBox Name="sizeTxt" TextChanged="sizeTxt_change" PreviewTextInput="NumberValidationTextBox" FontSize="100" Text="35" MaxLength="2" TextWrapping="NoWrap" Margin="-3,433,1149,152" TextAlignment="Center" Background="Transparent" Foreground="#dfa7e4" BorderThickness="0" FontFamily="Comic Sans MS"/>
             <Button Margin="1244,0,0,684" Background="Transparent" x:Name="ExitButton" BorderThickness="0" Click="Exit_Button">
                 <Image Source="/exit_icon.png" Height="42" Width="36" />
             </Button>
@@ -32,8 +32,8 @@
                 <Image Height="69" Width="72" Source="/back_arrow.png" Stretch="Fill"/>
             </Button>
             <Label x:Name="LiveTimeLabel" HorizontalAlignment="Left" Margin="565,0,0,0" VerticalAlignment="Top" Height="55" Width="186" FontSize="36" FontWeight="Bold" Foreground="White" FontFamily="Microsoft YaHei" />
-            <InkCanvas Margin="140,63,104,63" Background="#daefdf" Name="draw">
-                <InkCanvas.DefaultDrawingAttributes >
+            <InkCanvas Margin="140,63,104,63" Background="#daefdf" Name="draw" >
+                <InkCanvas.DefaultDrawingAttributes>
                     <DrawingAttributes
                 Color = "Black" Width = "35" Height="35" />
                 </InkCanvas.DefaultDrawingAttributes>
@@ -60,7 +60,18 @@
                 </Button.Effect>
                 <TextBlock Name="exportText" HorizontalAlignment="Center" Text="Download" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="43" Width="195" FontSize="40" TextAlignment="Center"/>
             </Button>
-            <Button Margin="7,143,1151,272" BorderThickness="0" Background="#933861" Cursor="Hand" Click="BrushSettings_click" x:Name="BrshSettings">
+            <Button Margin="14,556,1158,123" BorderThickness="0" Background="#933861" Cursor="Hand" Click="Apply_Click" x:Name="ApplyButton">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="100" Color="#FFBF477D"/>
+                </Button.Effect>
+                <TextBlock Name="applyTxt" HorizontalAlignment="Center" Text="Apply" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="23" Width="60" FontSize="20" TextAlignment="Center"/>
+            </Button>
+            <Button Margin="7,121,1151,294" BorderThickness="0" Background="#933861" Cursor="Hand" Click="BrushSettings_click" MouseDoubleClick="Brush_Click" x:Name="BrshSettings">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="50"/>
@@ -71,7 +82,7 @@
                 </Button.Effect>
                 <Image Source="/paint.png"/>
             </Button>
-            <Button Margin="1182,71,4,500" BorderThickness="0" Background="#933861" Cursor="Hand" Click="ClearBtn_click" x:Name="ClrBtn">
+            <Button Margin="1182,64,4,533" BorderThickness="0" Background="#933861" Cursor="Hand" Click="ClearBtn_click" x:Name="ClrBtn">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="50"/>
@@ -82,7 +93,7 @@
                 </Button.Effect>
                 <Image Source="/clear.png"/>
             </Button>
-            <Button Margin="1182,231,4,339" BorderThickness="0" Background="#933861" Cursor="Hand" Click="HighlightBtn_click" x:Name="highlightBtn">
+            <Button Margin="1182,206,4,391" BorderThickness="0" Background="#933861" Cursor="Hand" Click="HighlightBtn_click" x:Name="highlightBtn">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="50"/>
@@ -92,6 +103,28 @@
                     <DropShadowEffect BlurRadius="100" Color="#FFBF477D"/>
                 </Button.Effect>
                 <Image Source="/highlighter.png"/>
+            </Button>
+            <Button Margin="1182,353,4,244" BorderThickness="0" Background="#933861" Cursor="Hand" Click="EraserBtn_click" x:Name="EraserBtn">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="100" Color="#FFBF477D"/>
+                </Button.Effect>
+                <Image Source="/eraser.png"/>
+            </Button>
+            <Button Margin="1182,504,4,93" BorderThickness="0" Background="#933861" Cursor="Hand" Click="SelectBtn_click" x:Name="SelectBtn">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="100" Color="#FFBF477D"/>
+                </Button.Effect>
+                <Image Source="/select.png" Height="74" Width="70"/>
             </Button>
         </Grid>
     </Viewbox>

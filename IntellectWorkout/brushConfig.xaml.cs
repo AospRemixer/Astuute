@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,11 @@ namespace IntellectWorkout
             InitializeComponent();
         }
 
+        void thisClosing(object sender, CancelEventArgs e)
+        {
+            GlobalVars.brushConfigOpen = 0;
+        }
+
         // TO HELP DRAG MOVE THE APP
         private void mouseDownC(object sender, MouseButtonEventArgs e)
         {
@@ -34,17 +40,14 @@ namespace IntellectWorkout
         private void Exit_Button(object sender, RoutedEventArgs e)
         {
             spatialQuestions sq = new();
-            sq.saveS(GlobalVars.brushClr);
+            sq.saveS();
             Close();
+            GlobalVars.brushConfigOpen = 0;
         }
 
         private void cp_SelectedColorChanged_1(object sender, RoutedPropertyChangedEventArgs<Color?> e)
         {
-            if (cp.SelectedColor.HasValue)
-            {
-                GlobalVars.brushClr = cp.SelectedColor.Value.ToString();
-            }
-
+            GlobalVars.brushClr = cp.SelectedColor.Value.ToString();
         }
     }
 }

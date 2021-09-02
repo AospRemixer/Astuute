@@ -23,6 +23,7 @@ namespace IntellectWorkout
     public partial class spatialQuestions : Window
     {
         public static int fsM = 0;
+        public static string HexClr = GlobalVars.brushClr;
 
         public spatialQuestions()
         {
@@ -74,7 +75,6 @@ namespace IntellectWorkout
             }
         }
 
-
         // TO DOWNLOAD YOUR DRAWING
         private void Export_Click(object sender, RoutedEventArgs e)
         {
@@ -99,15 +99,33 @@ namespace IntellectWorkout
             }
         }
 
+        // Switch To Normal Brush.
         private void BrushSettings_click(object sender, RoutedEventArgs e)
         {
-            brushConfig bc = new();
-            bc.Show();
+            this.draw.EditingMode = InkCanvasEditingMode.Ink;
         }
 
-        public void saveS(string HexCode)
+        // Double Click to Open Brush Config.
+        private void Brush_Click(object sender, RoutedEventArgs e)
         {
-            draw.DefaultDrawingAttributes.Color = ConvertStringToColor(HexCode);
+            this.draw.EditingMode = InkCanvasEditingMode.Ink;
+            brushConfig bc = new();
+            if (GlobalVars.brushConfigOpen == 1)
+            {
+             
+            }
+            else
+            {
+                bc.Show();
+            }
+            GlobalVars.brushConfigOpen = 1;
+        }
+
+        public void saveS()
+        {
+            HexClr = GlobalVars.brushClr;
+            MessageBox.Show(HexClr);
+            draw.DefaultDrawingAttributes.Color = ConvertStringToColor(HexClr);
         }
 
         // Convert Hex to COLOR.
@@ -174,8 +192,24 @@ namespace IntellectWorkout
 
         private void sizeTxt_change(object sender, TextChangedEventArgs e)
         {
-            //draw.DefaultDrawingAttributes.Height = Convert.ToDouble(sizeTxt.Text);
-            //draw.DefaultDrawingAttributes.Width = Convert.ToDouble(sizeTxt.Text);
+            
+        }
+
+        private void EraserBtn_click(object sender, RoutedEventArgs e)
+        {
+            this.draw.EditingMode = InkCanvasEditingMode.EraseByStroke;
+        }
+
+        private void SelectBtn_click(object sender, RoutedEventArgs e)
+        {
+            this.draw.EditingMode = InkCanvasEditingMode.Select;
+        }
+
+        private void Apply_Click(object sender, RoutedEventArgs e)
+        {
+            double a = Convert.ToDouble(sizeTxt.Text);
+            draw.DefaultDrawingAttributes.Width = a;
+            draw.DefaultDrawingAttributes.Height= a;
         }
     }
 }

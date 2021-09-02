@@ -12,6 +12,7 @@
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         MouseDown="mouseDownC"
+        Closing="thisClosing"
         Title="brushConfig" Height="360" Width="480">
     <Grid>
         <Button Margin="440, 0, 0, 320" Background="Transparent" x:Name="ExitButton" BorderThickness="0" Click="Exit_Button">

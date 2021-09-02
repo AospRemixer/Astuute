@@ -23,5 +23,13 @@ namespace IntellectWorkout
             get { return brshClr; }
             set { brshClr = value; }
         }
+
+        private static int brshConfigOpn = 0;
+
+        public static int brushConfigOpen
+        {
+            get { return brshConfigOpn; }
+            set { brshConfigOpn = value; }
+        }
     }
 }
