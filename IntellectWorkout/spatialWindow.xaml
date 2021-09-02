@@ -55,6 +55,6 @@
             </Button.Effect>
             <Image Height="69" Width="72" Source="/back_arrow.png" Stretch="Fill"/>
         </Button>
-        
+
     </Grid>
 </Window>

@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:IntellectWorkout"
+        xmlns:xctk="http://schemas/xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:IntellectWorkout" xmlns:xctk1="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
         ResizeMode="NoResize"
         WindowStyle="None"
@@ -12,9 +13,10 @@
         WindowStartupLocation="CenterScreen"
         MouseDown="spatialQuestions_MouseDown"
         Title="spatialQuestions" Height="720" Width="1280">
+
     <Viewbox StretchDirection="Both" Stretch="Uniform">
         <Grid Height="720" Width="1280" >
-            <Viewbox StretchDirection="Both" Stretch="Uniform" />
+            <TextBox Name="sizeTxt" TextChanged="sizeTxt_change" PreviewTextInput="NumberValidationTextBox" FontSize="100" Text="35" MaxLength="2" TextWrapping="NoWrap" Margin="-3,485,1149,100" TextAlignment="Center" Background="Transparent" Foreground="#dfa7e4" BorderThickness="0" FontFamily="Comic Sans MS"/>
             <Button Margin="1244,0,0,684" Background="Transparent" x:Name="ExitButton" BorderThickness="0" Click="Exit_Button">
                 <Image Source="/exit_icon.png" Height="42" Width="36" />
             </Button>
@@ -36,7 +38,7 @@
                 Color = "Black" Width = "35" Height="35" />
                 </InkCanvas.DefaultDrawingAttributes>
             </InkCanvas>
-            <Button Margin="1042,626,0,10" BorderThickness="0" Background="#933861" Cursor="Hand" Click="FullscreenButton_Click" x:Name="FullButton">
+            <Button Margin="1089,639,0,10" BorderThickness="0" Background="#933861" Cursor="Hand" Click="FullscreenButton_Click" x:Name="FullButton">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="50"/>
@@ -46,6 +48,50 @@
                     <DropShadowEffect BlurRadius="100" Color="#FFBF477D"/>
                 </Button.Effect>
                 <TextBlock Name="fsText" HorizontalAlignment="Center" Text="Fullscreen" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="43" Width="195" FontSize="40" TextAlignment="Center"/>
+            </Button>
+            <Button Margin="0,639,1089,10" BorderThickness="0" Background="#933861" Cursor="Hand" Click="Export_Click" x:Name="ExportButton">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="100" Color="#FFBF477D"/>
+                </Button.Effect>
+                <TextBlock Name="exportText" HorizontalAlignment="Center" Text="Download" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="43" Width="195" FontSize="40" TextAlignment="Center"/>
+            </Button>
+            <Button Margin="7,143,1151,272" BorderThickness="0" Background="#933861" Cursor="Hand" Click="BrushSettings_click" x:Name="BrshSettings">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="100" Color="#FFBF477D"/>
+                </Button.Effect>
+                <Image Source="/paint.png"/>
+            </Button>
+            <Button Margin="1182,71,4,500" BorderThickness="0" Background="#933861" Cursor="Hand" Click="ClearBtn_click" x:Name="ClrBtn">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="100" Color="#FFBF477D"/>
+                </Button.Effect>
+                <Image Source="/clear.png"/>
+            </Button>
+            <Button Margin="1182,231,4,339" BorderThickness="0" Background="#933861" Cursor="Hand" Click="HighlightBtn_click" x:Name="highlightBtn">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="100" Color="#FFBF477D"/>
+                </Button.Effect>
+                <Image Source="/highlighter.png"/>
             </Button>
         </Grid>
     </Viewbox>

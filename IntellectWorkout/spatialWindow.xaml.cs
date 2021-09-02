@@ -60,6 +60,5 @@ namespace IntellectWorkout
             sq.Show();
             Close();
         }
-
     }
 }
