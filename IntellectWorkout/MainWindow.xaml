@@ -40,7 +40,7 @@
             <Button.Effect>
                 <DropShadowEffect BlurRadius="100" Color="#FF8856B3"/>
             </Button.Effect>
-            <TextBlock HorizontalAlignment="Center" Text="SPATIAL" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="34" Width="122" FontSize="36"/>
+            <TextBlock HorizontalAlignment="Center" Text="CREATIVITY" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="34" Width="184" FontSize="36"/>
         </Button>
         <Button Margin="524,450,524,34" BorderThickness="0" Background="#4f3565" Cursor="Hand" Click="Linguistic_Button_Click" x:Name="LinguisticButton">
             <Button.Resources>
@@ -51,7 +51,7 @@
             <Button.Effect>
                 <DropShadowEffect BlurRadius="100" Color="#FF8856B3"/>
             </Button.Effect>
-            <TextBlock HorizontalAlignment="Center" Text="LINGUISTIC" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="35" Width="179" FontSize="36"/>
+            <TextBlock HorizontalAlignment="Center" Text="VOCAB" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="35" Width="109" FontSize="36"/>
         </Button>
         <Button Margin="865,450,183,34" BorderThickness="0" Background="#4f3565" Cursor="Hand" Click="Kinesthetic_Button_Click" x:Name="KinestheticButton">
             <Button.Resources>
@@ -62,7 +62,7 @@
             <Button.Effect>
                 <DropShadowEffect BlurRadius="100" Color="#FF8856B3"/>
             </Button.Effect>
-            <TextBlock HorizontalAlignment="Center" Background="Transparent" Text="KINESTHETIC" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="36" Width="208" FontSize="36"/>
+            <TextBlock HorizontalAlignment="Center" Background="Transparent" Text="AWARENESS" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="36" Width="185" FontSize="36"/>
         </Button>
         <Button Margin="483,155,583,352" BorderThickness="0" Background="#a06b99" Cursor="Hand" Click="Memory_Button_Click" x:Name="MemoryButton">
             <Button.Resources>

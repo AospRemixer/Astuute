@@ -1,0 +1,57 @@
+﻿<Window x:Class="IntellectWorkout.volcabWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IntellectWorkout"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Background="#FF251020" 
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="spatialWindow_MouseDown"
+        Title="volcabWindow" Height="720" Width="1280">
+    <Grid>
+        <Button Margin="1244,0,0,684" Background="Transparent" x:Name="ExitButton" BorderThickness="0" Click="Exit_Button">
+            <Image Source="/exit_icon.png" Height="42" Width="36" />
+        </Button>
+        <Button Margin="10,10,1198,642" BorderThickness="0" Background="#933861" Cursor="Hand" Click="Back_Button_ClickV" x:Name="BackButton">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect  Color="#933861" BlurRadius="120"/>
+            </Button.Effect>
+            <Image Height="69" Width="72" Source="/back_arrow.png" Stretch="Fill"/>
+        </Button>
+        <RichTextBox IsReadOnly="True" Background="Transparent" Foreground="#dfa7e4" FontSize="50" Margin="286,107,286,534" BorderThickness="0" FontFamily="Malgun Gothic" FontWeight="Bold">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Welcome to Vocab Training!"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <RichTextBox Background="Transparent" Foreground="#dfa7e4" FontSize="27" Margin="290,185,254,248" BorderThickness="0" FontFamily="Bahnschrift" IsReadOnly="True">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="In the vocab exercise, you will see a 3d model of a random object. You will be given a few words that describe the object, the twist is that only one of them will be correct. You will have to figure out which one of those words is correct. If you figure out the correct one, then that's a point for you. More points mean a higher score. This exercise will increase your vocab since you will learn a new word every time you get a question wrong. Good Luck!"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button Margin="298,477,298,90" BorderThickness="0" Background="#933861" Cursor="Hand" Click="Start_Button_Click" x:Name="StartButton">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="50"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="100" Color="#FFBF477D"/>
+            </Button.Effect>
+            <TextBlock HorizontalAlignment="Center" Text="Start" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="78" Width="195" FontSize="78"/>
+        </Button>
+        <Label x:Name="LiveTimeLabel" HorizontalAlignment="Left" Margin="565,0,0,0" VerticalAlignment="Top" Height="55" Width="186" FontSize="36" FontWeight="Bold" Foreground="White" FontFamily="Microsoft YaHei" />
+    </Grid>
+</Window>

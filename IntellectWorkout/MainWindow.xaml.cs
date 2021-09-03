@@ -63,7 +63,9 @@ namespace IntellectWorkout
         // LINGUISTIC BUTTON
         private void Linguistic_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            volcabWindow vc = new();
+            vc.Show();
+            Close();
         }
 
         // KINESTHETIC BUTTON

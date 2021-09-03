@@ -28,17 +28,17 @@
             </Button.Effect>
             <TextBlock HorizontalAlignment="Center" Text="Start" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="78" Width="195" FontSize="78"/>
         </Button>
-        <RichTextBox IsReadOnly="True" Background="Transparent" Foreground="#dfa7e4" FontSize="50" Margin="155,106,119,535" BorderThickness="0" FontFamily="Malgun Gothic" FontWeight="Bold">
+        <RichTextBox IsReadOnly="True" Background="Transparent" Foreground="#dfa7e4" FontSize="50" Margin="126,101,90,540" BorderThickness="0" FontFamily="Malgun Gothic" FontWeight="Bold">
             <FlowDocument>
                 <Paragraph>
-                    <Run Text="Welcome to Spatial Intelligence Training!"/>
+                    <Run Text="Welcome to Creativity Intelligence Training!"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
         <RichTextBox Background="Transparent" Foreground="#dfa7e4" FontSize="22" Margin="290,185,254,248" BorderThickness="0" FontFamily="Bahnschrift" IsReadOnly="True">
             <FlowDocument>
                 <Paragraph>
-                    <Run Text="In spatial exercise you can draw as much as you want and do whatever you want. This exercise is extremly effective on kids, scientists have found that early education plays a large role in preparing our children for later success in spatial learning​​ because spatial reasoning starts early in the child development process. Neuroscientists find that specific regions in the brain responsible for thinking about location and spatial relation develop in very early childhood​​. In fact, preschoolers' spatial abilities can predict their future performance in math learning in middle and high school​​."/>
+                    <Run Text="In spatial exercise, you can draw whatever you want, Unleash your creativity. Creativity is surprisingly a very important part of intelligence. If a child can figure out different ways of doing a task, then he is smart.  This exercise is extremely effective on kids, scientists have found that early education plays a large role in preparing our children for later success in spatial learning​​ because spatial reasoning starts early in the child development process. Neuroscientists find that specific regions in the brain responsible for thinking about location and spatial relations develop in very early childhood​​. Preschoolers' spatial abilities can predict their future performance in math learning in middle and high school​​."/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
