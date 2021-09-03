@@ -23,7 +23,6 @@ namespace IntellectWorkout
     public partial class spatialQuestions : Window
     {
         public static int fsM = 0;
-        public static string HexClr = GlobalVars.brushClr;
 
         public spatialQuestions()
         {
@@ -78,6 +77,7 @@ namespace IntellectWorkout
         // TO DOWNLOAD YOUR DRAWING
         private void Export_Click(object sender, RoutedEventArgs e)
         {
+
             Rect bounds = VisualTreeHelper.GetDescendantBounds(draw);
             double dpi = 96d;
 
@@ -97,6 +97,7 @@ namespace IntellectWorkout
                 pngEncoder.Save(ms);
                 System.IO.File.WriteAllBytes("download.png", ms.ToArray());
             }
+            exportText.Text = "Save";
         }
 
         // Switch To Normal Brush.
@@ -105,27 +106,9 @@ namespace IntellectWorkout
             this.draw.EditingMode = InkCanvasEditingMode.Ink;
         }
 
-        // Double Click to Open Brush Config.
-        private void Brush_Click(object sender, RoutedEventArgs e)
-        {
-            this.draw.EditingMode = InkCanvasEditingMode.Ink;
-            brushConfig bc = new();
-            if (GlobalVars.brushConfigOpen == 1)
-            {
-             
-            }
-            else
-            {
-                bc.Show();
-            }
-            GlobalVars.brushConfigOpen = 1;
-        }
-
         public void saveS()
         {
-            HexClr = GlobalVars.brushClr;
-            MessageBox.Show(HexClr);
-            draw.DefaultDrawingAttributes.Color = ConvertStringToColor(HexClr);
+            draw.DefaultDrawingAttributes.Color = ConvertStringToColor(GlobalVars.brushClr);
         }
 
         // Convert Hex to COLOR.
@@ -211,5 +194,23 @@ namespace IntellectWorkout
             draw.DefaultDrawingAttributes.Width = a;
             draw.DefaultDrawingAttributes.Height= a;
         }
+
+        private void Undo_Click(object sender, RoutedEventArgs e)
+        {
+            if (draw.Strokes.Count > 0)
+            {
+                draw.Strokes.RemoveAt(draw.Strokes.Count - 1);
+            }
+            else
+            {
+                // Else Do Nothing.
+            }
+        }
+
+        private void cp_SelectedColorChanged_1(object sender, RoutedPropertyChangedEventArgs<Color?> e)
+        {
+            draw.DefaultDrawingAttributes.Color = ConvertStringToColor(cp.SelectedColor.Value.ToString());
+        }
+
     }
 }

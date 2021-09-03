@@ -32,10 +32,10 @@
                 <Image Height="69" Width="72" Source="/back_arrow.png" Stretch="Fill"/>
             </Button>
             <Label x:Name="LiveTimeLabel" HorizontalAlignment="Left" Margin="565,0,0,0" VerticalAlignment="Top" Height="55" Width="186" FontSize="36" FontWeight="Bold" Foreground="White" FontFamily="Microsoft YaHei" />
-            <InkCanvas Margin="140,63,104,63" Background="#daefdf" Name="draw" >
+            <InkCanvas Margin="140,63,104,63" Background="#fbedff" Name="draw" >
                 <InkCanvas.DefaultDrawingAttributes>
                     <DrawingAttributes
-                Color = "Black" Width = "35" Height="35" />
+                 Width = "35" Height="35" />
                 </InkCanvas.DefaultDrawingAttributes>
             </InkCanvas>
             <Button Margin="1089,639,0,10" BorderThickness="0" Background="#933861" Cursor="Hand" Click="FullscreenButton_Click" x:Name="FullButton">
@@ -71,7 +71,18 @@
                 </Button.Effect>
                 <TextBlock Name="applyTxt" HorizontalAlignment="Center" Text="Apply" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="23" Width="60" FontSize="20" TextAlignment="Center"/>
             </Button>
-            <Button Margin="7,121,1151,294" BorderThickness="0" Background="#933861" Cursor="Hand" Click="BrushSettings_click" MouseDoubleClick="Brush_Click" x:Name="BrshSettings">
+            <Button Margin="33,105,1177,574" BorderThickness="0" Background="#933861" Cursor="Hand" Click="Undo_Click" x:Name="undoButton">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="100" Color="#FFBF477D"/>
+                </Button.Effect>
+                <TextBlock Name="undoTxt" HorizontalAlignment="Center" Text="Undo" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="23" Width="60" FontSize="20" TextAlignment="Center"/>
+            </Button>
+            <Button Margin="7,238,1151,294" BorderThickness="0" Background="#933861" Cursor="Hand" Click="BrushSettings_click" x:Name="BrshSettings">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="50"/>
@@ -126,6 +137,7 @@
                 </Button.Effect>
                 <Image Source="/select.png" Height="74" Width="70"/>
             </Button>
+            <xctk1:ColorPicker FontFamily="Trebuchet MS" Background="#983c64" BorderThickness="0" Foreground="#dba2e1" Name="cp" Margin="14,185,1158,502"  DisplayColorAndName="True" SelectedColorChanged="cp_SelectedColorChanged_1" AvailableColorsSortingMode="HueSaturationBrightness"/>
         </Grid>
     </Viewbox>
 </Window>
