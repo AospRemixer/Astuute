@@ -31,5 +31,13 @@ namespace IntellectWorkout
             get { return brshConfigOpn; }
             set { brshConfigOpn = value; }
         }
+
+        private static string PthToAppFolder = System.AppDomain.CurrentDomain.BaseDirectory;
+
+        public static string PathToAppFolder
+        {
+            get { return PthToAppFolder; }
+            set { PthToAppFolder = value; }
+        }
     }
 }

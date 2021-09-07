@@ -23,7 +23,8 @@ namespace IntellectWorkout
         // RANDOM
         public static Random r = new();
         // LIST OF ALL URI's [IMAGE]                                                  0.  (1)6 is correct option                                                                                                1.  (B)27000 is correct option                                                                   2.   (3)10 is correct option                                                                                3.   (2)72 is correct option                                                                              4.    (1)24 is correct option                                                                                       5.   (1)7 is correct option                                                                       6.    (3)48 is correct option                                                                                         7. (C)8 is correct option                                                                                      8. (C)38 is correct option                                                                                9. (2)43 is correct
-        public static string[] uris = { @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\1.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\2.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\3.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\4.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\5.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\6.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\7.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\8.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\9.png", @"C:\Users\skulw\Downloads\VisualStudio\IntellectWorkout\IntellectWorkout\TimathonAssets\reasoningQ\10.png" };
+        public static string[] uris = { @"1.png", @"2.png", @"3.png", @"4.png", @"5.png", @"6.png", @"7.png", @"8.png", @"9.png", @"10.png" };
+        
         // CURRENT STATE.. [MAIN VARIABLE]
         public static int i = r.Next(0, 10);
         // NUM OF CORRECT
@@ -44,7 +45,7 @@ namespace IntellectWorkout
                 LiveTimeLabel.Content = DateTime.Now.ToString("HH:mm");
             }
         }
-        
+
         public void setupQ()
         {
             numOfC++;
@@ -52,15 +53,15 @@ namespace IntellectWorkout
             if (i == 9)
             {
                 i = 0;
-                mainImage.Source = new BitmapImage(new Uri(uris[i]));
+                mainImage.Source = new BitmapImage(new Uri(GlobalVars.PathToAppFolder + "rQ/" + uris[i], UriKind.RelativeOrAbsolute));
             }
             else
-            { 
+            {
                 i++;
-                mainImage.Source = new BitmapImage(new Uri(uris[i]));
+                mainImage.Source = new BitmapImage(new Uri(GlobalVars.PathToAppFolder + "rQ/" + uris[i], UriKind.RelativeOrAbsolute));
             }
             // THIS SETUPS THE TEXT ON THE BUTTON ACCORDING TO THE QUESTION, WHICH IS BASICALLY THE VARIABLE "i".
-            switch(i)
+            switch (i)
             {
                 case 0:
                     firstButtonText.Text = 6.ToString();
@@ -147,7 +148,7 @@ namespace IntellectWorkout
 
         private void first_click(object sender, RoutedEventArgs e)
         {
-            switch(i)
+            switch (i)
             {
                 case 0:
                     setupQ();
@@ -169,7 +170,7 @@ namespace IntellectWorkout
 
         private void second_click(object sender, RoutedEventArgs e)
         {
-            switch(i)
+            switch (i)
             {
                 case 1:
                     setupQ();
@@ -190,7 +191,7 @@ namespace IntellectWorkout
 
         private void third_click(object sender, RoutedEventArgs e)
         {
-            switch(i)
+            switch (i)
             {
                 case 2:
                     setupQ();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Threading;
 
 namespace IntellectWorkout
@@ -41,7 +42,16 @@ namespace IntellectWorkout
 
         private void Start_Button_Click(object sender, RoutedEventArgs e)
         {
+            vocabQuestions vq = new();
+            vq.Show();
+            Close();
+        }
 
+        // TO HELP DRAG MOVE THE APP
+        private void spatialWindow_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
         }
     }
 }

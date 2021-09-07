@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <PackageReference Include="Extended.Wpf.Toolkit" Version="4.1.0" />
+    <PackageReference Include="HelixToolkit.Wpf" Version="2.17.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -41,5 +42,10 @@
     <Resource Include="temp_background.jpg" />
     <Resource Include="Windows_Settings_app_icon.png" />
   </ItemGroup>
+	
+	
+	
 
 </Project>
+
+
