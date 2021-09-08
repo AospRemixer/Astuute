@@ -28,7 +28,7 @@
             </Button.Effect>
             <Image Height="69" Width="72" Source="/back_arrow.png" Stretch="Fill"/>
         </Button>
-        <helix:HelixViewport3D x:Name="viewPort3d" FixedRotationPointEnabled="False" Width="640" Height="420" ZoomExtentsWhenLoaded="true" Margin="320,10,320,290" >
+        <helix:HelixViewport3D x:Name="viewPort3d" FixedRotationPointEnabled="False" ShowViewCube="False" Width="640" Height="420" ZoomExtentsWhenLoaded="true" Margin="320,10,320,290" >
             <helix:DefaultLights/>
         </helix:HelixViewport3D>
         <TextBlock HorizontalAlignment="Center" Name="modelName" Foreground="#dfa7e4" Margin="0,435,0,0" FontSize="48" TextAlignment="Center" Text="Vocab" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="436" FontFamily="NSimSun"/>
@@ -44,7 +44,7 @@
             </Button.Effect>
             <TextBlock HorizontalAlignment="Center" Text="Next" TextAlignment="Center" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="78" Width="205" FontSize="78"/>
         </Button>
-        <Label Content="Label" Name="guideTxt" HorizontalAlignment="Left" Margin="46,100,0,0" FontSize="40" HorizontalContentAlignment="Left" VerticalAlignment="Top" Height="330" Width="274" FontFamily="Trebuchet MS" Foreground="#FFDFA7E4"/>
+        <Label Content="Label" Name="guideTxt" HorizontalAlignment="Left" Margin="46,100,0,0" FontSize="32" HorizontalContentAlignment="Left" VerticalAlignment="Top" Height="330" Width="274" FontFamily="Trebuchet MS" Foreground="#FFDFA7E4"/>
         <Label Name="lvl" Content="0" HorizontalAlignment="Left" Margin="1036,18,0,0" VerticalAlignment="Top" Foreground="#FFBF477D" FontSize="52" Height="80" Width="121" FontFamily="Trebuchet MS"/>
     </Grid>
 </Window>

@@ -15,14 +15,14 @@ namespace IntellectWorkout
         // Random
         public static Random r = new();
         //Path to the model file
-        private static string[] MODEL = { "mug.obj", "tooth.obj", "sword.obj", "pug.obj" };
+        private static string[] MODEL = { "mug.obj", "tooth.obj", "sword.obj", "pug.obj", "ship.obj", "cat.obj", "car.obj", "shoe.obj" };
         public string MODEL_PATH(int i)
         {
             string a = MODEL[i];
             return GlobalVars.PathToAppFolder + "3d/" + $"{a}";
         }
         // Question Num
-        public int i = r.Next(0, 4);
+        public int i = r.Next(0, 8);
         // Num Of Questions Done
         public int CURRENT_LVL = 0;
 
@@ -89,6 +89,26 @@ namespace IntellectWorkout
                     modelName.Text = "Pug";
                     guideTxt.Content = "1. Ironclad\n2. Unwavering\n3. Substantial\n4. Consequential\n5. Bulwarked";
                     break;
+                // Correct Awnser: 5
+                case 4:
+                    modelName.Text = "Ship";
+                    guideTxt.Content = "1. Marine\n2. Naval\n3. Aquatic\n4. Thalassic\n5. Nautical";
+                    break;
+                // Correct Awnser: 4
+                case 5:
+                    modelName.Text = "Lazy Cat";
+                    guideTxt.Content = "1. Droopy\n2. Flagging\n3. Languorous\n4. Lackadaisical\n5. Slothful";
+                    break;
+                // Correct Awnser: 3
+                case 6:
+                    modelName.Text = "Car";
+                    guideTxt.Content = "1. Jalopy\n2. Junker\n3. Automobile\n4. Heap\n5. Sedan";
+                    break;
+                // Correct Awnser: 1
+                case 7:
+                    modelName.Text = "Shoe";
+                    guideTxt.Content = "1. Lovely\n2. Dainty\n3. Beauteous\n4. Bonny\n5. Cheerful";
+                    break;
             }
         }
         
@@ -123,73 +143,146 @@ namespace IntellectWorkout
 
         private void NextButton_click(object sender, RoutedEventArgs e)
         {
-            int m = Convert.ToInt32(AwnsTxt.Text);
-            switch(i)
+            int outputValue;
+            bool isNumber = int.TryParse(AwnsTxt.Text, out outputValue);
+            if (!isNumber)
             {
-                case 0:
-                    if (m == 1)
-                    {
-                        i = r.Next(0, 4);
-                        string path = MODEL_PATH(i);
-                        SetupQ(path);
-                        CURRENT_LVL++;
-                        lvl.Content = CURRENT_LVL.ToString();
-                    }
-                    else
-                    {
-                        youLost yl = new();
-                        yl.Show();
-                        Close();
-                    }
-                    break;
-                case 1:
-                    if (m == 3)
-                    {
-                        i = r.Next(0, 4);
-                        string path = MODEL_PATH(i);
-                        SetupQ(path);
-                        CURRENT_LVL++;
-                        lvl.Content = CURRENT_LVL.ToString();
-                    }
-                    else
-                    {
-                        youLost yl = new();
-                        yl.Show();
-                        Close();
-                    }
-                    break;
-                case 2:
-                    if (m == 2)
-                    {
-                        i = r.Next(0, 4);
-                        string path = MODEL_PATH(i);
-                        SetupQ(path);
-                        CURRENT_LVL++;
-                        lvl.Content = CURRENT_LVL.ToString();
-                    }
-                    else
-                    {
-                        youLost yl = new();
-                        yl.Show();
-                        Close();
-                    }
-                    break;
-                case 3:
-                    if (m == 1)
-                    {
-                        i = r.Next(0, 4);
-                        string path = MODEL_PATH(i);
-                        SetupQ(path);
-                        CURRENT_LVL++;
-                        lvl.Content = CURRENT_LVL.ToString();
-                    }
-                    else
-                    {
-                        youLost yl = new();
-                        yl.Show();
-                        Close();
-                    }
-                    break;
+
+            }
+            else
+            {
+                int m = Convert.ToInt32(AwnsTxt.Text);
+                switch (i)
+                {
+                    case 0:
+                        if (m == 1)
+                        {
+                            i = r.Next(0, 8);
+                            string path = MODEL_PATH(i);
+                            SetupQ(path);
+                            CURRENT_LVL++;
+                            lvl.Content = CURRENT_LVL.ToString();
+                        }
+                        else
+                        {
+                            youLost yl = new();
+                            yl.Show();
+                            Close();
+                        }
+                        break;
+                    case 1:
+                        if (m == 3)
+                        {
+                            i = r.Next(0, 8);
+                            string path = MODEL_PATH(i);
+                            SetupQ(path);
+                            CURRENT_LVL++;
+                            lvl.Content = CURRENT_LVL.ToString();
+                        }
+                        else
+                        {
+                            youLost yl = new();
+                            yl.Show();
+                            Close();
+                        }
+                        break;
+                    case 2:
+                        if (m == 2)
+                        {
+                            i = r.Next(0, 8);
+                            string path = MODEL_PATH(i);
+                            SetupQ(path);
+                            CURRENT_LVL++;
+                            lvl.Content = CURRENT_LVL.ToString();
+                        }
+                        else
+                        {
+                            youLost yl = new();
+                            yl.Show();
+                            Close();
+                        }
+                        break;
+                    case 3:
+                        if (m == 1)
+                        {
+                            i = r.Next(0, 8);
+                            string path = MODEL_PATH(i);
+                            SetupQ(path);
+                            CURRENT_LVL++;
+                            lvl.Content = CURRENT_LVL.ToString();
+                        }
+                        else
+                        {
+                            youLost yl = new();
+                            yl.Show();
+                            Close();
+                        }
+                        break;
+                    case 4:
+                        if (m == 5)
+                        {
+                            i = r.Next(0, 8);
+                            string path = MODEL_PATH(i);
+                            SetupQ(path);
+                            CURRENT_LVL++;
+                            lvl.Content = CURRENT_LVL.ToString();
+                        }
+                        else
+                        {
+                            youLost yl = new();
+                            yl.Show();
+                            Close();
+                        }
+                        break;
+                    case 5:
+                        if (m == 4)
+                        {
+                            i = r.Next(0, 8);
+                            string path = MODEL_PATH(i);
+                            SetupQ(path);
+                            CURRENT_LVL++;
+                            lvl.Content = CURRENT_LVL.ToString();
+                        }
+                        else
+                        {
+                            youLost yl = new();
+                            yl.Show();
+                            Close();
+                        }
+                        break;
+                    case 6:
+                        if (m == 3)
+                        {
+                            i = r.Next(0, 8);
+                            string path = MODEL_PATH(i);
+                            SetupQ(path);
+                            CURRENT_LVL++;
+                            lvl.Content = CURRENT_LVL.ToString();
+                        }
+                        else
+                        {
+                            youLost yl = new();
+                            yl.Show();
+                            Close();
+                        }
+                        break;
+                    case 7:
+                        if (m == 1)
+                        {
+                            i = r.Next(0, 8);
+                            string path = MODEL_PATH(i);
+                            SetupQ(path);
+                            CURRENT_LVL++;
+                            lvl.Content = CURRENT_LVL.ToString();
+                        }
+                        else
+                        {
+                            youLost yl = new();
+                            yl.Show();
+                            Close();
+                        }
+                        break;
+                }
             }
         }
     }
