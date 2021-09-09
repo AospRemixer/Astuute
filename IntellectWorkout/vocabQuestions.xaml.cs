@@ -15,14 +15,14 @@ namespace IntellectWorkout
         // Random
         public static Random r = new();
         //Path to the model file
-        private static string[] MODEL = { "mug.obj", "tooth.obj", "sword.obj", "pug.obj", "ship.obj", "cat.obj", "car.obj", "shoe.obj" };
+        private static string[] MODEL = { "mug.obj", "tooth.obj", "sword.obj", "pug.obj", "ship.obj", "cat.obj", "car.obj", "shoe.obj", "leopard.obj", "onigiri.obj", "diamond.obj", "urus.obj", "ball.obj", "fire.obj" };
         public string MODEL_PATH(int i)
         {
             string a = MODEL[i];
             return GlobalVars.PathToAppFolder + "3d/" + $"{a}";
         }
         // Question Num
-        public int i = r.Next(0, 8);
+        public int i = r.Next(0, 14);
         // Num Of Questions Done
         public int CURRENT_LVL = 0;
 
@@ -109,6 +109,36 @@ namespace IntellectWorkout
                     modelName.Text = "Shoe";
                     guideTxt.Content = "1. Lovely\n2. Dainty\n3. Beauteous\n4. Bonny\n5. Cheerful";
                     break;
+                // Correct Awnser: 5
+                case 8:
+                    modelName.Text = "Cheetah";
+                    guideTxt.Content = "1. Lion\n2. Fast\n3. Panther\n4. Tom\n5. Civet";
+                    break;
+                // Correct Awnser: 3
+                case 9:
+                    modelName.Text = "Onigiri";
+                    guideTxt.Content = "1. Euphoric\n2. Beatific\n3. Appetizing\n4. Divine\n5. Scrumptious";
+                    break;
+                // Correct Awnser: 2
+                case 10:
+                    modelName.Text = "Diamond";
+                    guideTxt.Content = "1. Loner\n2. Singular\n3. Unthinkable\n4. Unwonted\n5. Queer";
+                    break;
+                // Correct Awnser: 2
+                case 11:
+                    modelName.Text = "Lambo Urus";
+                    guideTxt.Content = "1. Riches\n2. Affluence\n3. Fortune\n4. Charming\n5. Graceful";
+                    break;
+                // Correct Awnser: 5
+                case 12:
+                    modelName.Text = "Soccer Ball";
+                    guideTxt.Content = "1. Bundle\n2. Mass\n3. Pellet\n4. Globule\n5. Sphere";
+                    break;
+                // Correct Awnser: 3
+                case 13:
+                    modelName.Text = "Fire";
+                    guideTxt.Content = "1. Sparks\n2. Element\n3. Blaze\n4. Warmth\n5. Hearth";
+                    break;
             }
         }
         
@@ -157,7 +187,7 @@ namespace IntellectWorkout
                     case 0:
                         if (m == 1)
                         {
-                            i = r.Next(0, 8);
+                            i = r.Next(0, 14);
                             string path = MODEL_PATH(i);
                             SetupQ(path);
                             CURRENT_LVL++;
@@ -173,7 +203,7 @@ namespace IntellectWorkout
                     case 1:
                         if (m == 3)
                         {
-                            i = r.Next(0, 8);
+                            i = r.Next(0, 14);
                             string path = MODEL_PATH(i);
                             SetupQ(path);
                             CURRENT_LVL++;
@@ -189,7 +219,7 @@ namespace IntellectWorkout
                     case 2:
                         if (m == 2)
                         {
-                            i = r.Next(0, 8);
+                            i = r.Next(0, 14);
                             string path = MODEL_PATH(i);
                             SetupQ(path);
                             CURRENT_LVL++;
@@ -205,7 +235,7 @@ namespace IntellectWorkout
                     case 3:
                         if (m == 1)
                         {
-                            i = r.Next(0, 8);
+                            i = r.Next(0, 14);
                             string path = MODEL_PATH(i);
                             SetupQ(path);
                             CURRENT_LVL++;
@@ -221,7 +251,7 @@ namespace IntellectWorkout
                     case 4:
                         if (m == 5)
                         {
-                            i = r.Next(0, 8);
+                            i = r.Next(0, 14);
                             string path = MODEL_PATH(i);
                             SetupQ(path);
                             CURRENT_LVL++;
@@ -237,7 +267,7 @@ namespace IntellectWorkout
                     case 5:
                         if (m == 4)
                         {
-                            i = r.Next(0, 8);
+                            i = r.Next(0, 14);
                             string path = MODEL_PATH(i);
                             SetupQ(path);
                             CURRENT_LVL++;
@@ -253,7 +283,7 @@ namespace IntellectWorkout
                     case 6:
                         if (m == 3)
                         {
-                            i = r.Next(0, 8);
+                            i = r.Next(0, 14);
                             string path = MODEL_PATH(i);
                             SetupQ(path);
                             CURRENT_LVL++;
@@ -269,7 +299,103 @@ namespace IntellectWorkout
                     case 7:
                         if (m == 1)
                         {
-                            i = r.Next(0, 8);
+                            i = r.Next(0, 14);
+                            string path = MODEL_PATH(i);
+                            SetupQ(path);
+                            CURRENT_LVL++;
+                            lvl.Content = CURRENT_LVL.ToString();
+                        }
+                        else
+                        {
+                            youLost yl = new();
+                            yl.Show();
+                            Close();
+                        }
+                        break;
+                    case 8:
+                        if (m == 5)
+                        {
+                            i = r.Next(0, 14);
+                            string path = MODEL_PATH(i);
+                            SetupQ(path);
+                            CURRENT_LVL++;
+                            lvl.Content = CURRENT_LVL.ToString();
+                        }
+                        else
+                        {
+                            youLost yl = new();
+                            yl.Show();
+                            Close();
+                        }
+                        break;
+                    case 9:
+                        if (m == 3)
+                        {
+                            i = r.Next(0, 14);
+                            string path = MODEL_PATH(i);
+                            SetupQ(path);
+                            CURRENT_LVL++;
+                            lvl.Content = CURRENT_LVL.ToString();
+                        }
+                        else
+                        {
+                            youLost yl = new();
+                            yl.Show();
+                            Close();
+                        }
+                        break;
+                    case 10:
+                        if (m == 2)
+                        {
+                            i = r.Next(0, 14);
+                            string path = MODEL_PATH(i);
+                            SetupQ(path);
+                            CURRENT_LVL++;
+                            lvl.Content = CURRENT_LVL.ToString();
+                        }
+                        else
+                        {
+                            youLost yl = new();
+                            yl.Show();
+                            Close();
+                        }
+                        break;
+                    case 11:
+                        if (m == 2)
+                        {
+                            i = r.Next(0, 14);
+                            string path = MODEL_PATH(i);
+                            SetupQ(path);
+                            CURRENT_LVL++;
+                            lvl.Content = CURRENT_LVL.ToString();
+                        }
+                        else
+                        {
+                            youLost yl = new();
+                            yl.Show();
+                            Close();
+                        }
+                        break;
+                    case 12:
+                        if (m == 5)
+                        {
+                            i = r.Next(0, 14);
+                            string path = MODEL_PATH(i);
+                            SetupQ(path);
+                            CURRENT_LVL++;
+                            lvl.Content = CURRENT_LVL.ToString();
+                        }
+                        else
+                        {
+                            youLost yl = new();
+                            yl.Show();
+                            Close();
+                        }
+                        break;
+                    case 13:
+                        if (m == 3)
+                        {
+                            i = r.Next(0, 14);
                             string path = MODEL_PATH(i);
                             SetupQ(path);
                             CURRENT_LVL++;

@@ -37,7 +37,7 @@
         <RichTextBox Background="Transparent" Foreground="#dfa7e4" FontSize="27" Margin="290,185,254,248" BorderThickness="0" FontFamily="Bahnschrift" IsReadOnly="True">
             <FlowDocument>
                 <Paragraph>
-                    <Run Text="In the vocab exercise, you will see a 3d model of a random object. You will be given a few words that describe the object, the twist is that only one of them will be correct. You will have to figure out which one of those words is correct. If you figure out the correct one, then that's a point for you. More points mean a higher score. This exercise will increase your vocab since you will learn a new word every time you get a question wrong. Good Luck!"/>
+                    <Run Text="In the vocab exercise, you will see a 3d model of a random object. You will be given a few words that describe the object, the twist is that you have to figure out which one of them applies the best to the 3d object. If you figure out the correct one, then that's a point for you. More points mean a higher score. This exercise will increase your vocab since you will learn a new word every time you get a question wrong. Good Luck!"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
