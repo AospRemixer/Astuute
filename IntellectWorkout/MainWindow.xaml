@@ -64,7 +64,7 @@
             </Button.Effect>
             <TextBlock HorizontalAlignment="Center" Background="Transparent" Text="AWARENESS" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="36" Width="185" FontSize="36"/>
         </Button>
-        <Button Margin="483,155,583,352" BorderThickness="0" Background="#a06b99" Cursor="Hand" Click="Memory_Button_Click" x:Name="MemoryButton">
+        <Button Margin="506,155,524,315" BorderThickness="0" Height="250" Width="250"  Background="#a06b99" Cursor="Hand" Click="Memory_Button_Click" x:Name="MemoryButton">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="50"/>
@@ -75,7 +75,7 @@
             </Button.Effect>
             <TextBlock HorizontalAlignment="Center" Background="Transparent" Text="MEMORY" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="40" Width="135" FontSize="36"/>
         </Button>
-        <Button Margin="764,155,302,352" BorderThickness="0" Background="#a06b99" Cursor="Hand" Click="Reasoning_Button_Click" x:Name="ReasoningButton">
+        <Button Margin="847,155,183,315" BorderThickness="0" Background="#a06b99" Width="250" Height="250" Cursor="Hand" Click="Reasoning_Button_Click" x:Name="ReasoningButton">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="50"/>
@@ -85,28 +85,6 @@
                 <DropShadowEffect BlurRadius="100" Color="#FFC078B7"/>
             </Button.Effect>
             <TextBlock HorizontalAlignment="Center" Background="Transparent" Text="REASONING" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="35" Width="185" FontSize="36"/>
-        </Button>
-        <Button Margin="1033,118,131,486" BorderThickness="0" Background="#4e3551" Cursor="Hand" Click="Settings_Button_Click" x:Name="SettingsButton">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="30"/>
-                </Style>
-            </Button.Resources>
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-            <Image Height="47" Width="47" Source="/Windows_Settings_app_icon.png" Stretch="Fill"/>
-        </Button>
-        <Button Margin="1033,252,131,352" BorderThickness="0" Background="#4e3551" Cursor="Hand" Click="Secret_Button_Click" x:Name="SecretButton">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="30"/>
-                </Style>
-            </Button.Resources>
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-            <Image Height="56" Width="57" Source="/shushing-face.png" Stretch="Fill"/>
         </Button>
         <TextBlock HorizontalAlignment="Left" Margin="1052,41,0,0" Text="HOME" Foreground="#906e9e" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Trebuchet MS" Height="54" Width="228" FontSize="48">
             <TextBlock.Effect>

@@ -77,7 +77,8 @@ namespace IntellectWorkout
         // TO DOWNLOAD YOUR DRAWING
         private void Export_Click(object sender, RoutedEventArgs e)
         {
-
+            string downloadsFolder = GlobalVars.KnownFolders.GetPath(GlobalVars.KnownFolder.Downloads);
+            MessageBox.Show("Saved To Downloads Folder!");
             Rect bounds = VisualTreeHelper.GetDescendantBounds(draw);
             double dpi = 96d;
 
@@ -95,7 +96,7 @@ namespace IntellectWorkout
             using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
             {
                 pngEncoder.Save(ms);
-                System.IO.File.WriteAllBytes("download.png", ms.ToArray());
+                System.IO.File.WriteAllBytes(downloadsFolder + @"\download.png", ms.ToArray());
             }
             exportText.Text = "Save";
         }

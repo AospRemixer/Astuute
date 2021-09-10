@@ -71,7 +71,9 @@ namespace IntellectWorkout
         // KINESTHETIC BUTTON
         private void Kinesthetic_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            awarnessWindow aw = new();
+            aw.Show();
+            Close();
         }
 
         // SETTINGS BUTTON
