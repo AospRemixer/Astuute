@@ -12,6 +12,8 @@ namespace IntellectWorkout
     /// </summary>
     public partial class vocabQuestions : Window
     {
+        // Global variables...
+
         // Random
         public static Random r = new();
         //Path to the model file
@@ -26,6 +28,7 @@ namespace IntellectWorkout
         // Num Of Questions Done
         public int CURRENT_LVL = 0;
 
+        // to startup this window!
         public vocabQuestions()
         {
             InitializeComponent();
@@ -40,11 +43,13 @@ namespace IntellectWorkout
                 DragMove();
         }
 
+        // To exit the app!
         private void Exit_Button(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        // to go back a window!
         private void Back_Button_ClickV(object sender, RoutedEventArgs e)
         {
             volcabWindow vw = new();
@@ -52,7 +57,7 @@ namespace IntellectWorkout
             Close();
         }
 
-        // Setup Next Q
+        // Setup Next Question!
         public void SetupQ(string ModelS)
         {
             AwnsTxt.Text = "Awnser Here";
@@ -165,12 +170,14 @@ namespace IntellectWorkout
             return device;
         }
 
+        // Makes sure the text is only a number between 1-5
         private void txtInput(object sender, TextCompositionEventArgs e)
         {
             Regex regex = new Regex("[^0-5]+");
             e.Handled = regex.IsMatch(e.Text);
         }
 
+        // Checks if the awnser is correct! "NextButton"
         private void NextButton_click(object sender, RoutedEventArgs e)
         {
             int outputValue;

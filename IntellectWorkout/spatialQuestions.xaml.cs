@@ -22,8 +22,10 @@ namespace IntellectWorkout
     /// </summary>
     public partial class spatialQuestions : Window
     {
+        // Global Variables...
         public static int fsM = 0;
 
+        // Starts this window!
         public spatialQuestions()
         {
             InitializeComponent();
@@ -39,11 +41,13 @@ namespace IntellectWorkout
             }
         }
 
+        // To Close the app!
         private void Exit_Button(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        // To Go back a window!
         private void Back_Button_ClickM(object sender, RoutedEventArgs e)
         {
             spatialWindow sw = new();
@@ -58,6 +62,7 @@ namespace IntellectWorkout
                 DragMove();
         }
 
+        // FullScreen Mode Button
         private void FullscreenButton_Click(object sender, RoutedEventArgs e)
         {
             if (fsM == 0)
@@ -107,6 +112,7 @@ namespace IntellectWorkout
             this.draw.EditingMode = InkCanvasEditingMode.Ink;
         }
 
+        // Save Brush Color
         public void saveS()
         {
             draw.DefaultDrawingAttributes.Color = ConvertStringToColor(GlobalVars.brushClr);
@@ -139,7 +145,8 @@ namespace IntellectWorkout
 
             return System.Windows.Media.Color.FromArgb(a, r, g, b);
         }
-
+        
+        // To Clear Drawing!
         private void ClearBtn_click(object sender, RoutedEventArgs e)
         {
             if(draw.Strokes.Count != 0)
@@ -156,6 +163,7 @@ namespace IntellectWorkout
             
         }
 
+        // To Use highlighter!
         private void HighlightBtn_click(object sender, RoutedEventArgs e)
         {
             if (draw.DefaultDrawingAttributes.IsHighlighter)
@@ -168,27 +176,32 @@ namespace IntellectWorkout
             }
         }
 
+        // To Change brush size!
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
             Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text);
         }
 
+        // do nothing is size text is changed!
         private void sizeTxt_change(object sender, TextChangedEventArgs e)
         {
             
         }
 
+        // to activated eraser mode!
         private void EraserBtn_click(object sender, RoutedEventArgs e)
         {
             this.draw.EditingMode = InkCanvasEditingMode.EraseByStroke;
         }
 
+        // To activate select mode!
         private void SelectBtn_click(object sender, RoutedEventArgs e)
         {
             this.draw.EditingMode = InkCanvasEditingMode.Select;
         }
 
+        // To apply brush size!
         private void Apply_Click(object sender, RoutedEventArgs e)
         {
             double a = Convert.ToDouble(sizeTxt.Text);
@@ -196,6 +209,7 @@ namespace IntellectWorkout
             draw.DefaultDrawingAttributes.Height= a;
         }
 
+        // To Undo!
         private void Undo_Click(object sender, RoutedEventArgs e)
         {
             if (draw.Strokes.Count > 0)
@@ -208,6 +222,7 @@ namespace IntellectWorkout
             }
         }
 
+        // To save the chosen color!
         private void cp_SelectedColorChanged_1(object sender, RoutedPropertyChangedEventArgs<Color?> e)
         {
             draw.DefaultDrawingAttributes.Color = ConvertStringToColor(cp.SelectedColor.Value.ToString());

@@ -21,19 +21,23 @@ namespace IntellectWorkout
     /// </summary>
     public partial class awarenessQuestions : Window
     {
+        // Global Variables!
         public static int waitMode = 0;
         public Stopwatch sw = new Stopwatch();
 
+        // Setup This Window!
         public awarenessQuestions()
         {
             InitializeComponent();
         }
 
+        // To close this app!
         private void Exit_Button(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        // To go back a window!
         private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
             awarnessWindow aw = new();
@@ -41,12 +45,14 @@ namespace IntellectWorkout
             Close();
         }
 
+        // To drag move the app!
         private void awarenessQ_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
         }
 
+        // This Fucntion Sets the main Button Color, and text and also starts the timer!
         private async void mainFunc()
         {
             var converter = new BrushConverter();
@@ -65,6 +71,7 @@ namespace IntellectWorkout
 
         }
 
+        // This start button is the main button's onClick trigger code. It does a certain task depending on the state of the activity! 
         private void Start_Button_Click(object sender, RoutedEventArgs e)
         {
             if (sw.IsRunning)

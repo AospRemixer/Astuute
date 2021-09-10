@@ -9,6 +9,11 @@ namespace IntellectWorkout
 {
     class GlobalVars
     {
+        /// <summary>
+        /// These are my Global Variables, these are used all around the app!
+        /// </summary>
+
+        // This is a dummy string, not needed. 
         private static string dummyString = "";
 
         public static string pubDummyString
@@ -17,6 +22,7 @@ namespace IntellectWorkout
             set { dummyString = value; }
         }
 
+        // This is brshClr variable, for the spatial exercise!
         private static string brshClr = "#000000";
 
         public static string brushClr
@@ -25,6 +31,7 @@ namespace IntellectWorkout
             set { brshClr = value; }
         }
 
+        // This tells if brshConfig is open or not!
         private static int brshConfigOpn = 0;
 
         public static int brushConfigOpen
@@ -33,6 +40,7 @@ namespace IntellectWorkout
             set { brshConfigOpn = value; }
         }
 
+        // This variable gets the path to this apps folder!
         private static string PthToAppFolder = System.AppDomain.CurrentDomain.BaseDirectory;
 
         public static string PathToAppFolder
@@ -41,6 +49,9 @@ namespace IntellectWorkout
             set { PthToAppFolder = value; }
         }
 
+        /// <summary>
+        ///  This is a class filled with the path to all the main folders!
+        /// </summary>
         public static class KnownFolders
         {
             private static string[] _knownFolderGuids = new string[]

@@ -10,6 +10,7 @@ namespace IntellectWorkout
     /// </summary>
     public partial class volcabWindow : Window
     {
+        // Starts up this window!
         public volcabWindow()
         {
             InitializeComponent();
@@ -25,7 +26,6 @@ namespace IntellectWorkout
             }
         }
 
-
         // To Close The App!
         private void Exit_Button(object sender, RoutedEventArgs e)
         {
@@ -40,6 +40,7 @@ namespace IntellectWorkout
             Close();
         }
 
+        // To go to the next window!
         private void Start_Button_Click(object sender, RoutedEventArgs e)
         {
             vocabQuestions vq = new();

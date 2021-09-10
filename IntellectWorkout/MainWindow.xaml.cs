@@ -13,6 +13,7 @@ namespace IntellectWorkout
         
         public MainWindow()
         {
+            // Starts this application!
             InitializeComponent();
             // THIS IS THE TIMER PART
             DispatcherTimer LiveTime = new DispatcherTimer();
@@ -74,18 +75,6 @@ namespace IntellectWorkout
             awarnessWindow aw = new();
             aw.Show();
             Close();
-        }
-
-        // SETTINGS BUTTON
-        private void Settings_Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        // SECRET BUTTON
-        private void Secret_Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         // TO HELP DRAG THE APP

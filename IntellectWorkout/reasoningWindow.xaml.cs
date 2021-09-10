@@ -20,6 +20,7 @@ namespace IntellectWorkout
     /// </summary>
     public partial class reasoningWindow : Window
     {
+        // Starts this window!
         public reasoningWindow()
         {
             InitializeComponent();
@@ -35,11 +36,13 @@ namespace IntellectWorkout
             }
         }
 
+        // To close this app!
         private void Exit_Button_Reasoning(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        // To go back a window!
         private void Back_Button_ClickR(object sender, RoutedEventArgs e)
         {
             MainWindow mw = new();
@@ -47,6 +50,7 @@ namespace IntellectWorkout
             Hide();
         }
 
+        // To go to the next window!
         private void Start_Button_Click(object sender, RoutedEventArgs e)
         {
             reasoningQuestions rq = new();
@@ -54,6 +58,7 @@ namespace IntellectWorkout
             Hide();
         }
 
+        // To Drag Move the app!
         private void reasoningWindow_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)

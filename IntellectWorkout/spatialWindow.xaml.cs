@@ -20,6 +20,7 @@ namespace IntellectWorkout
     /// </summary>
     public partial class spatialWindow : Window
     {
+        // Startup this windoW!
         public spatialWindow()
         {
             InitializeComponent();
@@ -35,11 +36,13 @@ namespace IntellectWorkout
             }
         }
 
+        // To close this app!
         private void Exit_Button_Memory(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        // to go back a window!
         private void Back_Button_ClickM(object sender, RoutedEventArgs e)
         {
             MainWindow mw = new();
@@ -54,6 +57,7 @@ namespace IntellectWorkout
                 DragMove();
         }
 
+        // To go to the next window!
         private void Start_Button_Click(object sender, RoutedEventArgs e)
         {
             spatialQuestions sq = new();

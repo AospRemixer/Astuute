@@ -13,12 +13,10 @@
         MouseDown="MainWindow_MouseDown"
         Title="Intellect Workout" Height="720" Width="1280">
 
-
-
     <Grid>
         <Image Margin="149,86,113,34" Stretch="Fill" Source="/brain_working_out.png"/>
         <Image Margin="-104,10,-140,-332" Stretch="Fill" Source="/space_crack_art.png"/>
-        <Button Margin="49,47,850,315" BorderThickness="0" Background="#933861" Cursor="Hand" Click="Math_Button_Click" x:Name="MathButton">
+        <Button Margin="78,47,821,315" BorderThickness="0" Background="#933861" Cursor="Hand" Click="Math_Button_Click" x:Name="MathButton">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="50"/>
@@ -31,7 +29,7 @@
         </Button>
 
 
-        <Button Margin="198,450,850,34" BorderThickness="0" Background="#4f3565" Cursor="Hand" Click="Spatial_Button_Click" x:Name="SpatialButton">
+        <Button Margin="227,450,821,34" BorderThickness="0" Background="#4f3565" Cursor="Hand" Click="Spatial_Button_Click" x:Name="SpatialButton">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="50"/>
@@ -42,7 +40,7 @@
             </Button.Effect>
             <TextBlock HorizontalAlignment="Center" Text="CREATIVITY" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="34" Width="184" FontSize="36"/>
         </Button>
-        <Button Margin="524,450,524,34" BorderThickness="0" Background="#4f3565" Cursor="Hand" Click="Linguistic_Button_Click" x:Name="LinguisticButton">
+        <Button Margin="553,450,495,34" BorderThickness="0" Background="#4f3565" Cursor="Hand" Click="Linguistic_Button_Click" x:Name="LinguisticButton">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="50"/>
@@ -53,7 +51,7 @@
             </Button.Effect>
             <TextBlock HorizontalAlignment="Center" Text="VOCAB" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="35" Width="109" FontSize="36"/>
         </Button>
-        <Button Margin="865,450,183,34" BorderThickness="0" Background="#4f3565" Cursor="Hand" Click="Kinesthetic_Button_Click" x:Name="KinestheticButton">
+        <Button Margin="894,450,154,34" BorderThickness="0" Background="#4f3565" Cursor="Hand" Click="Kinesthetic_Button_Click" x:Name="KinestheticButton">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="50"/>
@@ -64,7 +62,7 @@
             </Button.Effect>
             <TextBlock HorizontalAlignment="Center" Background="Transparent" Text="AWARENESS" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="36" Width="185" FontSize="36"/>
         </Button>
-        <Button Margin="506,155,524,315" BorderThickness="0" Height="250" Width="250"  Background="#a06b99" Cursor="Hand" Click="Memory_Button_Click" x:Name="MemoryButton">
+        <Button Margin="535,155,495,315" BorderThickness="0" Height="250" Width="250"  Background="#a06b99" Cursor="Hand" Click="Memory_Button_Click" x:Name="MemoryButton">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="50"/>
@@ -75,7 +73,7 @@
             </Button.Effect>
             <TextBlock HorizontalAlignment="Center" Background="Transparent" Text="MEMORY" Foreground="#dfa7e4" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Trebuchet MS" Height="40" Width="135" FontSize="36"/>
         </Button>
-        <Button Margin="847,155,183,315" BorderThickness="0" Background="#a06b99" Width="250" Height="250" Cursor="Hand" Click="Reasoning_Button_Click" x:Name="ReasoningButton">
+        <Button Margin="876,155,154,315" BorderThickness="0" Background="#a06b99" Width="250" Height="250" Cursor="Hand" Click="Reasoning_Button_Click" x:Name="ReasoningButton">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="50"/>

@@ -10,6 +10,7 @@ namespace IntellectWorkout
     /// </summary>
     public partial class mathWindow : Window
     {
+        // Starts this window!
         public mathWindow()
         {
             InitializeComponent();
@@ -32,7 +33,6 @@ namespace IntellectWorkout
             Application.Current.Shutdown();
         }
 
-
         // START BUTTON
         private void Start_Button_Click(object sender, RoutedEventArgs e)
         {
@@ -40,7 +40,6 @@ namespace IntellectWorkout
             mq.Show();
             Close();
         }
-
 
         // BACK BUTTON
         private void Back_Button_Click(object sender, RoutedEventArgs e)

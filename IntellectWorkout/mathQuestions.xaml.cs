@@ -10,8 +10,9 @@ namespace IntellectWorkout
     /// </summary>
     public partial class mathQuestions : Window
     {
-        // MAKE "RANDOM" VARIABLES
-        
+        // All My Global Variables...
+
+        // MAKE "RANDOM" VARIABLE
         Random r = new Random();
         // THE QUESTION NUMBER
         public static Int32 MAIN_NUM;
@@ -22,7 +23,7 @@ namespace IntellectWorkout
         // YOU LOST.XAML
         public static youLost yL = new();
         
-
+        // To Startup This Window!
         public mathQuestions()
         {
             InitializeComponent();
@@ -58,12 +59,13 @@ namespace IntellectWorkout
             removeQ();
         }
 
-
+        // To close the app!
         private void exitMathQuestions_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        // Sets up the next question.. [All In One Function!]
         public void createQ(int dummyNum)
         {
             if (CURRENT_LVL == 9)
@@ -87,33 +89,14 @@ namespace IntellectWorkout
             }
         }
 
+        // This is to reset the points and etc!
         public void removeQ()
         {
             NUM_OF_Q = -1;
             CURRENT_LVL = -1;
         }
 
-
-        private void first_Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void second_Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void third_Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void forth_Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+        // Submit Button.. Checks if the awnser is correct or not!
         public void SubmitButton_click(object sender, RoutedEventArgs e)
         {
             if(CURRENT_LVL == 9)
@@ -502,25 +485,3 @@ namespace IntellectWorkout
     }
 
 }
-
-    // W.i.P
-    /*        void newQ()
-            {
-                int correctAwns = 0;
-                int numberOfAwns = 0;
-
-
-            }
-    */
-
-    // W.I.P
-    /*        public int RandomNum()
-            {
-                var exclude = new HashSet<int>() { random };
-                var range = Enumerable.Range(1, 100).Where(i => !exclude.Contains(i));
-
-                var rand = new System.Random();
-                int index = rand.Next(0, 100 - exclude.Count);
-                return range.ElementAt(index);
-            }
-    */

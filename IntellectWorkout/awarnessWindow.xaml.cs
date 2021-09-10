@@ -19,22 +19,26 @@ namespace IntellectWorkout
     /// </summary>
     public partial class awarnessWindow : Window
     {
+        // This Starts this Window!
         public awarnessWindow()
         {
             InitializeComponent();
         }
 
+        // This Allows the App to be draged!
         private void awarnessWindow_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
         }
 
+        // This is to exit the app!
         private void Exit_Button(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        // This is to go back a window!
         private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mw = new();
@@ -42,6 +46,7 @@ namespace IntellectWorkout
             Close();
         }
 
+        // This is to load the next window!
         private void Start_Button_Click(object sender, RoutedEventArgs e)
         {
             awarenessQuestions aq = new();

@@ -8,6 +8,7 @@ namespace IntellectWorkout
     /// </summary>
     public partial class youLost : Window
     {
+        // To start up this window!
         public youLost()
         {
             InitializeComponent();
@@ -20,11 +21,13 @@ namespace IntellectWorkout
                 DragMove();
         }
 
+        // To close this app!
         private void exitYouLost_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        // To go back to home screen! And clear all activities!
         private void returnToHome_click(object sender, RoutedEventArgs e)
         {
             MainWindow mw = new();

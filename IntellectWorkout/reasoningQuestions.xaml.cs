@@ -20,16 +20,20 @@ namespace IntellectWorkout
     /// </summary>
     public partial class reasoningQuestions : Window
     {
+        // Global Variables....
         // RANDOM
         public static Random r = new();
-        // LIST OF ALL URI's [IMAGE]                                                  0.  (1)6 is correct option                                                                                                1.  (B)27000 is correct option                                                                   2.   (3)10 is correct option                                                                                3.   (2)72 is correct option                                                                              4.    (1)24 is correct option                                                                                       5.   (1)7 is correct option                                                                       6.    (3)48 is correct option                                                                                         7. (C)8 is correct option                                                                                      8. (C)38 is correct option                                                                                9. (2)43 is correct
+
+        // All Images:
         public static string[] uris = { @"1.png", @"2.png", @"3.png", @"4.png", @"5.png", @"6.png", @"7.png", @"8.png", @"9.png", @"10.png" };
         
-        // CURRENT STATE.. [MAIN VARIABLE]
+        // CURRENT QUESTION.. [MAIN VARIABLE]
         public static int i = r.Next(0, 10);
+
         // NUM OF CORRECT
         public static int numOfC = -1;
 
+        // Starts this window up!
         public reasoningQuestions()
         {
             InitializeComponent();
@@ -46,6 +50,7 @@ namespace IntellectWorkout
             }
         }
 
+        // The main function! Setups the question! [All in one function!]
         public void setupQ()
         {
             numOfC++;
@@ -126,6 +131,7 @@ namespace IntellectWorkout
             }
         }
 
+        // This is to close the app!
         private void Exit_Button_Memory(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
@@ -138,6 +144,7 @@ namespace IntellectWorkout
                 DragMove();
         }
 
+        // To Go Back a Window!
         private void Back_Button_ClickR(object sender, RoutedEventArgs e)
         {
             reasoningWindow rw = new();
@@ -146,6 +153,7 @@ namespace IntellectWorkout
             resetAll();
         }
 
+        // First Button!
         private void first_click(object sender, RoutedEventArgs e)
         {
             switch (i)
@@ -168,6 +176,7 @@ namespace IntellectWorkout
             }
         }
 
+        // Second Button!
         private void second_click(object sender, RoutedEventArgs e)
         {
             switch (i)
@@ -189,6 +198,7 @@ namespace IntellectWorkout
             }
         }
 
+        // Third Button!
         private void third_click(object sender, RoutedEventArgs e)
         {
             switch (i)
@@ -213,6 +223,7 @@ namespace IntellectWorkout
             }
         }
 
+        // Forth Button!
         private void forth_click(object sender, RoutedEventArgs e)
         {
             // So basically 4th button is never correct :(((
@@ -221,6 +232,7 @@ namespace IntellectWorkout
             Close();
         }
 
+        // To Reset the points and etc!
         public void resetAll()
         {
             i = r.Next(0, 10);

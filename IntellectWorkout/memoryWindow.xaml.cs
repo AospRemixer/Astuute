@@ -20,6 +20,7 @@ namespace IntellectWorkout
     /// </summary>
     public partial class memoryWindow : Window
     {
+        // Starts this window!
         public memoryWindow()
         {
             InitializeComponent();
@@ -37,6 +38,7 @@ namespace IntellectWorkout
 
         }
 
+        // Starts the next window!
         private void Start_Button_Click(object sender, RoutedEventArgs e)
         {
             memoryQuestions mq = new();
@@ -44,11 +46,13 @@ namespace IntellectWorkout
             Hide();
         }
 
+        // To close the app!
         private void Exit_Button_Memory(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        // To go back to the main window!
         private void Back_Button_ClickM(object sender, RoutedEventArgs e)
         {
             MainWindow mw = new();
@@ -56,6 +60,7 @@ namespace IntellectWorkout
             Hide();
         }
 
+        // To drag move the app!
         private void memoryWindow_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)

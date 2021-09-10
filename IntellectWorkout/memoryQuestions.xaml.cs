@@ -12,6 +12,8 @@ namespace IntellectWorkout
     /// </summary>
     public partial class memoryQuestions : Window
     {
+        // All Global Variables....
+
         // NEW RANDOM
         public static Random r = new();
         // OLD USED NUMS STORE HERE
@@ -23,6 +25,7 @@ namespace IntellectWorkout
         // USEFUL INT 
         public static int i = 0;
 
+        // Starts this Window Up!
         public memoryQuestions()
         {
             InitializeComponent();
@@ -44,11 +47,13 @@ namespace IntellectWorkout
 
         }
 
+        // To close this app!
         private void Exit_Button_MemoryQ(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        // To Go back.. and clears the points!
         private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
             allNums.Clear();
@@ -73,7 +78,6 @@ namespace IntellectWorkout
 
         }
 
-
         // IF REPEATED BUTTON IS CLICKED
         public void numChecker(int numToCheck)
         {
@@ -95,6 +99,7 @@ namespace IntellectWorkout
             }
         }
 
+        // Repeated Button.. checks if the number is repeated or not.
         private void RepeatedButton_click(object sender, RoutedEventArgs e)
         {
             string mainToText = mainText.Text.ToString();
@@ -103,6 +108,7 @@ namespace IntellectWorkout
 
         }
 
+        // Most of the main work is done here... Next Button!
         private void NextButton_click(object sender, RoutedEventArgs e)
         {
             int nextRand = r.Next(0, 26);
@@ -128,6 +134,7 @@ namespace IntellectWorkout
 
         }
 
+        // This resets all the points and etc!
         public void ResetAll()
         {
             points = 0;
