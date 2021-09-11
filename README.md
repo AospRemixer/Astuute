@@ -44,7 +44,7 @@ _By doing this you are telling the antivirus that this exe file is safe to run!_
 🧠 Extras... 🧠
 ===========
 
-[![HowToUse](https://i.ibb.co/n0Cf3c8/Untitled-1.png)](https://github.com/AospRemixer/Astuute/releases/download/wpf/Astuute_v1.0.0.zip)<br/>
-[![AboutTheDev](https://i.ibb.co/0hGKjDp/Untitled-1.png)](https://google.com)<br/>
-[![AboutTheDev](https://i.ibb.co/zQTmZhh/Untitled-1.png)](https://google.com)<br/>
+[![HowToUse](https://i.ibb.co/n0Cf3c8/Untitled-1.png)](https://github.com/AospRemixer/Astuute/blob/master/README/HowToUse.md)<br/>
+[![AboutTheDev](https://i.ibb.co/0hGKjDp/Untitled-1.png)](https://github.com/AospRemixer/Astuute/blob/master/README/AboutTheDev.md)<br/>
+[![CheatSheet](https://i.ibb.co/zQTmZhh/Untitled-1.png)](https://github.com/AospRemixer/Astuute/blob/master/README/CheatSheet.md)<br/>
 [![Downloads](https://i.ibb.co/mGPjdxh/Untitled-1.png)](https://github.com/AospRemixer/Astuute/releases/download/wpf/Astuute_v1.0.0.zip)
