@@ -6,6 +6,12 @@
     <UseWPF>true</UseWPF>
     <AssemblyName>Astuute</AssemblyName>
     <RootNamespace>IntellectWorkout</RootNamespace>
+    <ApplicationIcon>astuute.ico</ApplicationIcon>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <Authors>Prabhdeep Singh</Authors>
+    <Description>×º°”˜`”°º×x🧠𝓐𝓼𝓽𝓾𝓾𝓽𝓮🖊x×º°”˜`”°º× 
+👉DO YOU👈 want to become a genius? Do you want abilities like being able to learn faster, being able to type rapidly, being able to remember every slight detail for weeks or even months? Well, give Astuute a chance, stop wasting time, and start spending time improving your brain so you can save your time. "Time is more valuable than money, you can get more money, but you cannot get more time." - Jim Rohn. "Astuute a day keeps the bugs away!".</Description>
+    <RepositoryUrl>https://github.com/AospRemixer/Astuute</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
