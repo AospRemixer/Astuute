@@ -10,11 +10,11 @@
 
 # How to Install?
 
-<font size="20">**1. Download**</font>
+<font size="20">**1. Download:**</font>
 
 [![Downloads](https://i.ibb.co/mGPjdxh/Untitled-1.png)](https://github.com/AospRemixer/Astuute/releases/download/wpf/Astuute_v1.0.0.zip)
 
-**2. Extract the zip file**
+**2. Extract the zip file:**
 
 ![image](https://user-images.githubusercontent.com/67806882/132959197-915eff33-8da0-4921-9a84-52068e6dc096.png)
 ![image](https://user-images.githubusercontent.com/67806882/132959221-03966a33-fa36-4380-bcea-de75da6b16c8.png)
@@ -22,11 +22,11 @@
 
 You can use the windows default extracter. Since everyone has that on their Windows device. 
 
-**3. Locate the Asuute.exe file and run it**
+**3. Locate the Asuute.exe file and run it:**
 
 ![image](https://user-images.githubusercontent.com/67806882/132959264-909ad243-6cb0-44d8-b75b-99e76c18dfb2.png)
 
-**Optional: If you get a windows antivirus warning**
+**Optional: If you get a windows antivirus warning:**
 
 1st Click:<br/>
 ![image](https://user-images.githubusercontent.com/67806882/132959288-d6bdb890-3bc0-4914-bd5a-3e6b16d2b73c.png)
