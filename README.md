@@ -1,4 +1,4 @@
-![Astuute](https://raw.githubusercontent.com/AospRemixer/Astuute/main/README/4kBannerAstuute.png)
+![Astuute](https://i.ibb.co/9c0VRXS/4k-Banner-Astuute.png)
 
 👑 Welcome to Astuute 👑
 ===========
